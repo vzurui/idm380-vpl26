@@ -1,0 +1,160 @@
+:root {
+  /* Default and Web Safe Fonts */
+  --classy-font__font-family--arial: Arial, sans-serif;
+  --classy-font__font-family--georgia: Georgia, serif;
+  --classy-font__font-family--impact: Impact, sans-serif;
+  --classy-font__font-family--tahoma: Tahoma, sans-serif;
+  --classy-font__font-family--times-new-roman: 'Times New Roman', serif;
+  --classy-font__font-family--verdana: Verdana, sans-serif;
+
+  /* Google Fonts */
+  --classy-font__font-family--domine: 'Domine', serif;
+  --classy-font__font-family--inter: 'Inter', sans-serif;
+  --classy-font__font-family--karla: 'Karla', sans-serif;
+  --classy-font__font-family--lato: 'Lato', sans-serif;
+  --classy-font__font-family--merriweather: 'Merriweather', serif;
+  --classy-font__font-family--montserrat: 'Montserrat', sans-serif;
+  --classy-font__font-family--open-sans: 'Open Sans', sans-serif;
+  --classy-font__font-family--oswald: 'Oswald', sans-serif;
+  --classy-font__font-family--poppins: 'Poppins', sans-serif;
+  --classy-font__font-family--pt-sans: 'PT Sans', sans-serif;
+  --classy-font__font-family--raleway: 'Raleway', sans-serif;
+  --classy-font__font-family--roboto: 'Roboto', sans-serif;
+  --classy-font__font-family--slabo-13px: 'Slabo 13px', serif;
+  --classy-font__font-family--slabo-27px: 'Slabo 27px', serif;
+  --classy-font__font-family--source-sans-3: 'Source Sans 3', sans-serif;
+
+  /* Theme Colors */
+  --classy-theme-color__brand-primary: #425ccd;
+  --classy-theme-color__brand-secondary: #e8ebf9;
+  --classy-theme-color__brand-tertiary: #303030;
+  --classy-theme-color__text-general: #2d2e31;
+  --classy-theme-color__background: #ffffff;
+  --classy-theme-color__background-accent: #f2f1ef;
+
+  /* Base Font Family */
+  --classy-font__font-family--base: system-ui, -apple-system, BlinkMacSystemFont, 'San Francisco',
+    'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+
+  /* Typography Variables */
+  --classy-font__label--font-size: 12px;
+  --classy-font__label--line-height: 1.5;
+  --classy-font__label--font-weight: 400;
+  --classy-font__label-bold--font-weight: 700;
+
+  --classy-font__paragraph-sm--font-size: 14px;
+  --classy-font__paragraph-sm--line-height: 1.5;
+  --classy-font__paragraph-sm--font-weight: 400;
+  --classy-font__paragraph-sm-bold--font-size: 14px;
+  --classy-font__paragraph-sm-bold--line-height: 1.5;
+  --classy-font__paragraph-sm-bold--font-weight: 700;
+
+  --classy-font__paragraph-md--font-size: 16px;
+  --classy-font__paragraph-md--line-height: 1.5;
+  --classy-font__paragraph-md--font-weight: 400;
+  --classy-font__paragraph-md-bold--font-size: 16px;
+  --classy-font__paragraph-md-bold--line-height: 1.5;
+  --classy-font__paragraph-md-bold--font-weight: 700;
+
+  --classy-font__paragraph-lg--font-size: 20px;
+  --classy-font__paragraph-lg--line-height: 1.5;
+  --classy-font__paragraph-lg--font-weight: 400;
+  --classy-font__paragraph-lg-bold--font-size: 20px;
+  --classy-font__paragraph-lg-bold--line-height: 1.5;
+  --classy-font__paragraph-lg-bold--font-weight: 700;
+
+  --classy-font__heading-sm--font-size: 28px;
+  --classy-font__heading-sm--line-height: 1.2;
+  --classy-font__heading-sm--font-weight: 700;
+
+  --classy-font__tag-bold--font-size: 12px;
+  --classy-font__tag-bold--line-height: 1;
+  --classy-font__tag-bold--font-weight: 700;
+
+  /* General and Heading Font Family Aliases */
+  --classy-theme-font__font-family--paragraph: var(--classy-font__font-family--base);
+  --classy-theme-font__font-family--heading: var(--classy-font__font-family--base);
+
+  --classy-font__heading-xs--font-size: 24px;
+  --classy-font__heading-xs--line-height: 1.2;
+  --classy-font__heading-xs--font-weight: 700;
+
+  --classy-theme-font__paragraph-md--font-size: 16px;
+  --classy-theme-font__paragraph-md--line-height: 1.5;
+  --classy-theme-font__paragraph-md--font-weight: 400;
+
+  /* Border Radius */
+  --classy-border__radius-sm: 4px;
+  --classy-border__radius-md: 8px;
+  --classy-border__radius-lg: 12px;
+  --classy-border__radius-xl: 16px;
+  --classy-border__radius-xxl: 20px;
+
+  /* Shadows */
+  --classy-shadow__button: 0 2px 2px 0 rgba(27, 25, 24, 0.12);
+  --classy-shadow__text: 0 1px 1px 0 rgba(0, 0, 0, 0.24);
+  --classy-shadow__alert: 0 4px 8px 0 rgba(28, 25, 23, 0.12);
+  --classy-shadow__modal: 0 16px 32px 0 rgba(27, 25, 24, 0.12);
+  --classy-shadow__sheet: 0 0 16px 0 rgba(27, 25, 24, 0.24);
+  --classy-shadow__active: 0px 2px 2px 0px rgba(0, 0, 0, 0.24) inset,
+    1px 1px 1px 0px rgba(0, 0, 0, 0.24) inset;
+  --classy-shadow__inactive: 0px -2px 4px 0px rgba(0, 0, 0, 0.12) inset,
+    1px 2px 4px 0px rgba(255, 255, 255, 0.12) inset;
+
+  /* Brand Colors */
+  --classy-color__brand-primary--base: rgb(54, 81, 201);
+  --classy-color__brand-primary--darker: rgb(27, 40, 101);
+  --classy-color__brand-primary--dark: rgb(41, 61, 153);
+  --classy-color__brand-primary--light: rgb(102, 123, 214);
+  --classy-color__brand-primary--lighter: rgb(154, 168, 228);
+  --classy-color__brand-primary--lightest: rgb(207, 213, 242);
+  --classy-color__brand-secondary: rgb(232, 235, 248);
+  --classy-color__brand-secondary-dark: rgb(206, 213, 242);
+  --classy-color__brand-tertiary: rgb(26, 25, 24);
+
+  /* Neutral Colors */
+  --classy-color__neutral--10: rgb(27, 25, 24);
+  --classy-color__neutral--20: rgb(49, 47, 45);
+  --classy-color__neutral--30: rgb(80, 76, 73);
+  --classy-color__neutral--40: rgb(106, 101, 98);
+  --classy-color__neutral--45: rgb(120, 114, 110);
+  --classy-color__neutral--50: rgb(133, 127, 122);
+  --classy-color__neutral--60: rgb(157, 152, 149);
+  --classy-color__neutral--70: rgb(181, 178, 176);
+  --classy-color__neutral--80: rgb(206, 204, 202);
+  --classy-color__neutral--90: rgb(230, 229, 229);
+  --classy-color__neutral--95: rgb(243, 242, 242);
+  --classy-color__neutral--100: rgb(255, 255, 255);
+
+  /* Borders */
+  --classy-color__border--input: var(--classy-color__neutral--50);
+  --classy-color__border--input-hover: var(--classy-color__neutral--60);
+  --classy-color__border--lightest: rgb(235, 234, 234);
+  --classy-color__border--placeholder: rgb(248, 247, 247);
+  --classy-color__border--focus: rgb(41, 114, 255);
+
+  /* Backgrounds */
+  --classy-color__background: rgb(255, 255, 255);
+  --classy-color__background--accent: rgb(245, 245, 245);
+  --classy-color__background--lightest: var(--classy-color__neutral--95);
+  --classy-color__background--input: rgb(248, 247, 247);
+  --classy-color__background--backdrop: rgba(255, 255, 255, 0.8);
+  --classy-color__background--backdrop-dark: rgba(26, 25, 25, 0.8);
+
+  /* Status Colors */
+  --classy-color__status--error-base: rgb(169, 15, 15);
+  --classy-color__status--error-lightest: rgb(254, 246, 246);
+  --classy-color__status--success-base: rgb(46, 125, 50);
+
+  /*
+   * * Component-specific
+   * ! FIXME align breakpoint names with design system, CL-27142
+   */
+  --classy-layout__max-width--tablet: 1280px;
+  --classy-section__padding-inline--mobile: 24px;
+  --classy-section__padding-block--mobile: 24px;
+  --classy-section__padding-inline--tablet: 32px;
+  --classy-section__padding-block--tablet: 48px;
+  --classy-content__width--wide: 768px;
+}
+
