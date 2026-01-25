@@ -1,23 +1,57 @@
 :root {
+/* color styles */
+
 --background-color-light: #FFF8EF;
---background-color-dark: #103729;
+--background-color-dark: #434D5D;
 
 --dark-text: #241D1D;
---light-text: #FFF8EF;
+--light-text: #FFFCF8;
 
+--primary-light:#389C6D;
+--primary-mid:#2C745A;
+--primary-dark:#103729;
+
+--secondary-light:#EFA672;
+--secondary-mid:#B6703F;
+--secondary-dark:#7D4218;
+
+--tertiary-light:#E6DDC9;
+--tertiary-mid: #C6B89B;
+--tertiary-dark:#9C8963;
+
+--error-light: #EF8372;
+--error-mid:#953B3B;
+--error-dark:#860707;
+
+--success-light:#84C673;
+--success-mid: #4D953B;
+--success-dark: #208607;
+
+/* font styles */
 
 --font-main: 'Lexend Deca', Arial, Helvetica, sans-serif;
   --font-weight-light: 300;
   --font-weight-medium: 500;
   --font-weight-bold: 800;
 
---body-line-height: 1.95rem;
---body-word-space: 0.1rem;
---body-letter-space: 0.01rem;
+/* font sizes */
 
---h1-line-height: 4.5rem;
---h2-line-height: 3.15rem;
---h3-line-height: 2.7rem;
+--fs-body: clamp(1rem, 0.95rem + 0.4vw, 1.2rem);
+  --fs-h1: clamp(2rem, 1.2rem + 3vw, 3rem);
+  --fs-h2: clamp(1.5rem, 1.1rem + 1.5vw, 2.2rem);
+  --fs-h3: clamp(1.25rem, 1.05rem + 0.8vw, 1.8rem);
+
+/* spacing styles */
+
+--ls-body: 0.01rem;
+--ls-h1: clamp(0.02rem, 0.015rem + 0.2vw, 0.04rem);
+--ls-h2: clamp(0.015rem, 0.01rem + 0.15vw, 0.03rem);
+--ls-h3: clamp(0.01rem, 0.005rem + 0.1vw, 0.02rem);
+
+--lh-body: 1.6;
+--lh-h1: 1.15;
+--lh-h2: 1.25;
+--lh-h3: 1.35;
 
 }
 
@@ -59,18 +93,17 @@ main {
 	gap: 6rem;
 	padding: 6rem 10rem 10rem 10rem;
 	margin: 0;
-
 }
 
 header {
-	background-color: var(--background-color-dark);
+	background-color: var(--primary-dark);
 	display: flex;
 	align-content: flex-end;
 	justify-content: space-between;
   align-items: center;
   gap: 1.5rem;
 	margin: 0;
-	padding: 0 2rem 0 2rem;
+	padding: 1rem 2rem 1rem 2rem;
 }
 
 #logoImage img {
@@ -88,9 +121,6 @@ header {
   text-decoration: none;
 }
 
-.navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: #389C6D;
-}
 
 
 
@@ -102,7 +132,7 @@ header {
 .dropdown .dropbtn {
   font-family: var(--font-main);
 font-weight: var(--font-weight-medium);
-  font-size: 1.2rem;  
+  font-size: var(--fs-body);  
   border: none;
   outline: none;
   color: white;
@@ -115,7 +145,7 @@ font-weight: var(--font-weight-medium);
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: var(--background-color-dark);
+  background-color: var(--primary-dark);
   z-index: 1;
 }
 
@@ -141,10 +171,27 @@ font-weight: var(--font-weight-medium);
   outline-offset: 3px;
 }
 
+/* Make dropdown links readable by default */
+.dropdown-content a {
+  color: var(--light-text);
+}
+
+/* Hover + keyboard focus: links + buttons + dropdown items */
+.navbar a:hover,
+.navbar a:focus-visible,
+.dropdown .dropbtn:hover,
+.dropdown .dropbtn:focus-visible,
+.dropdown-content a:hover,
+.dropdown-content a:focus-visible {
+  color: var(--primary-light); /* #389C6D */
+  text-decoration: underline;
+  text-underline-offset: 0.3em;
+}
+
 
 
 footer {
-	background-color: var(--background-color-dark);
+	background-color: var(--primary-dark);
 	 display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -159,14 +206,14 @@ footer {
 .socials {
   display: flex;
   flex-direction: row;
-  gap: 6rem;
+  gap: 3rem;
   justify-content: center
 }
 
 .footer-nav {
   display: flex;
   flex-direction: row;
-  gap: 3rem;
+  gap: 6rem;
   justify-content: center
 }
 
@@ -180,27 +227,24 @@ footer {
 
 } 
 
-section{
-flex-direction: column;
-}
-
 .bold-1{
-  color: #4D953B;
+  color: var(--success-mid);
 }
 
 .bold-2 {
-  color: #7D4218;
+  color: var(--secondary-dark);
 }
 
 #intro {
   display: flex;
+  flex-direction: column;
   gap: 3rem; 
   align-items: flex-start;
 }
 
 #about-us {
   display: flex;
-  background-color: var(--background-color-dark);
+  background-color: var(--primary-dark);
   border-radius: 1rem;
   padding: 2.5em;
   max-width: 70ch;
@@ -267,14 +311,14 @@ ul.partner-schools{
   align-items: start;
 }
 
-
 .values-title {
   grid-column: 1 / -1; /* span both columns */
 	text-align: center;
-  background-color: var(--background-color-dark);
+  background-color: var(--primary-dark);
   border-radius: 4rem;
   margin: 0 22em 0 22em;
 }
+
 .values-title h1{
 color: var(--light-text);
 }
@@ -291,7 +335,7 @@ img {
 li {
 	list-style-type: none;
 	color: var(--background-color-light);
-	font-size: 1.3rem;
+	font-size: var(--fs-body);
 	line-height: 2rem;
   font-family: 'Lexend Deca', Arial, Helvetica, sans-serif;
   font-weight: 300;
@@ -301,10 +345,9 @@ li {
 p {
   font-family: 'Lexend Deca', Arial, Helvetica, sans-serif;
   font-weight: 300;
-	line-height: var(--body-line-height);
-	font-size: 1.3rem;
-	word-spacing: var(--body-word-space);
-	letter-spacing: var(--body-letter-space);
+	line-height: var(--lh-body);
+	font-size: var(--fs-body);
+	letter-spacing: var(--ls-body);
   max-width: 75ch;
 }
 
@@ -313,35 +356,62 @@ font-family: 'Lexend Deca', Arial, Helvetica, sans-serif;
 font-weight: 500;
 max-width: 55ch;
 color: var(--dark-text);
-font-size: 1.8rem;
-line-height: var(--h3-line-height);
+font-size: var(--fs-h3);
+line-height: var(--lh-h3);
+letter-spacing: var(--ls-h3);
 }
 
 h2 { 
   font-family: 'Lexend Deca', Arial, Helvetica, sans-serif;
   font-weight: 500;
-	font-size: 2.1rem;
+	font-size: var(--fs-h2);
 	color: var(--dark-text);
-	line-height: var(--h2-line-height);
+	line-height: var(--lh-h2);
+  letter-spacing: var(--ls-h2);
 }
 
 h1 {
   font-family: 'Lexend Deca', Arial, Helvetica, sans-serif;
   font-weight: 800;
-	font-size: 3rem;
+	font-size: var(--fs-h1);
 	color: var(--dark-text);
 	text-align: center;
-	line-height: var(--h1-line-height);
+	line-height: var(--lh-h1);
+  letter-spacing: var(--ls-h1);
 }
 
 a {
   font-family: 'Lexend Deca', Arial, Helvetica, sans-serif;
   font-weight: 500;
-	font-size: 1.2rem;
+	font-size: var(--fs-body);
 	text-decoration: none;
 }
 
-a:link {
+header a { 
+  color: var(--light-text); 
+}
+
+header a:hover, button:hover { 
+  color: var(--success-light); 
+}
+
+footer a { 
+  color: var(--light-text); 
+}
+
+footer a:hover { 
+  color: var(--secondary-mid); 
+}
+
+main a { 
+  color: var(--light-text); 
+}
+
+main a:hover { 
+  color: var(--secondary-light);
+ }
+
+/* a:link {
 	color: #FFFCF8;
 }
 
@@ -351,7 +421,7 @@ a:visited {
 
 a:hover {
 	color: #EFA672;
-}
+} */
 
 button {
 	color: var(--light-text);
@@ -361,9 +431,21 @@ button {
 
 .sponsor {
 	background-color: #2C745A;
-	padding: 1.5rem;
+	padding: 1.3rem;
 	border-radius: 2em;
+  display: inline-flex;
 }
+
+.sponsor:hover{
+	background-color: var(--primary-dark);
+	padding: 1.3rem;
+	border-radius: 2em;
+  display: inline-flex;
+}
+
+/* a.sponsor:hover{
+color: var(--tertiary-light);
+} */
 
 
 hr.solid {
@@ -374,12 +456,12 @@ hr.solid {
 
 /* Newsletter block */
 .newsletter {
-  background: #103729;
+  background: var(--primary-dark);
   padding: 5rem 1.5rem;
 }
 
 .newsletter-container {
-  background: #fff;
+  background: var(--light-text);
   max-width: 36rem;
   margin: 0 auto;
   padding: 2.5rem 2.75rem;
@@ -388,13 +470,14 @@ hr.solid {
 
 .newsletter-title {
   margin: 0 0 0.75rem;
-  font-size: 2.25rem;
-  line-height: 1.2;
+  font-size: var(--fs-h2);
+  line-height: var(--lh-h2);
+  color: var(--dark-text);
 }
 
 .newsletter-subtitle {
   margin: 0 0 1.5rem;
-  color: #103729;
+  color: var(--primary-dark);
 }
 
 /* Form layout */
@@ -407,7 +490,7 @@ hr.solid {
 .form-field label {
   display: block;
   margin-bottom: 0.5rem;
-  color: #103729;
+  color: var(--primary-dark);
   font-size: 0.95rem;
 }
 
@@ -416,7 +499,7 @@ hr.solid {
   min-height: 2.75rem;
   padding: 0.75rem 1rem;
   border-radius: 0.25rem;
-  border: 1px solid #d2d7df;
+  border: 0.01rem solid #d2d7df;
 }
 
 .form-field input:focus {
@@ -433,7 +516,7 @@ hr.solid {
 
 .newsletter-legend {
   margin-bottom: 0.75rem;
-  color: #103729;
+  color: var(--primary-dark);
   font-size: 0.95rem;
 }
 
@@ -442,7 +525,7 @@ hr.solid {
   gap: 0.5rem;
   align-items: flex-start;
   margin-bottom: 0.75rem;
-  color: #103729;
+  color: var(--primary-dark);
 }
 
 .checkbox input {
@@ -453,7 +536,7 @@ hr.solid {
 
 /* Submit */
 .newsletter-button {
-  background: #b6703f;
+  background: var(--secondary-mid);
   color: #fff8ef;
   border: 0;
   border-radius: 0.25rem;
@@ -463,7 +546,8 @@ hr.solid {
 }
 
 .newsletter-button:hover {
-  background: #efa672;
+  background: var(--secondary-light);
+  color: var(--primary-dark);
 }
 
 /* Optional: make asterisk red */
@@ -489,7 +573,49 @@ hr.solid {
 
 /* user prefers dark mode */
 
+/* @media (prefers-color-scheme: dark){
+  body{
+    background: var(--background-color-dark);
+  }
+
+  p, h1, h2, h3, .farm-sites li, .partner-schools li {
+    color: var(--light-text);
+  }
+  .bold-1{
+    color: var(--success-light);
+  }
+  
+  .bold-2 {
+    color: var(--secondary-mid);
+  }  
+} */
+
 /* user prefers light mode */
 
+@media (prefers-color-scheme: light){
+  body{
+    background: var(--background-color-light);
+  }
+
+  p, h1, h2, h3, .farm-sites li, .partner-schools li {
+    color: var(--dark-text);
+  }
+  .bold-1{
+    color: var(--success-mid);
+  }
+  
+  .bold-2 {
+    color: var(--secondary-dark);
+  }  
+} 
+
 /* user prefers reduced motion */
+
+@media (prefers-reduced-motion: reduce){
+  *, *::before, *::after{
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 
