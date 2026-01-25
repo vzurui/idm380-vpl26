@@ -6,44 +6,31 @@
 --light-text: #FFF8EF;
 
 
---body-line-height: 1.6em;
+--body-line-height: 1.95rem;
 --body-word-space: 0.1rem;
 --body-letter-space: 0.01rem;
 
+--h1-line-height: 4.5rem;
+--h2-line-height: 3.15rem;
+--h3-line-height: 2.7rem;
 
 }
-
 
 body {
 	background-color: var(--background-color-light);
 	color: var(--text-color-dark);
+	padding: 0;
+	margin: 0;
 }
 
 main {
 	display: flex;
 	flex-direction: column;
-	gap: 3rem;
-	padding: 3rem;
-}
+	justify-content: space-between;
+	gap: 6rem;
+	padding: 10rem;
+	margin: 0;
 
-#locations {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  align-items: start;
-}
-
-.locations-title {
-  grid-column: 1 / -1; /* span both columns */
-	text-align: center;
-}
-
-.locations-text {
-  grid-column: 1;
-}
-
-.locations-map {
-  grid-column: 2;
 }
 
 header {
@@ -53,7 +40,8 @@ header {
 	justify-content: space-between;
   align-items: center;
   gap: 1.5rem;
-	margin: 1.5em;
+	margin: 0;
+	padding: 0 2rem 0 2rem;
 }
 
 
@@ -62,7 +50,6 @@ header {
   align-items: center;        /* vertical alignment */
   justify-content: space-between;
   gap: 2rem;
-  padding: 1rem 2rem;
 }
 
 #logoImage img {
@@ -77,6 +64,7 @@ footer {
 	flex-direction: column;
 	align-items: center;
 	gap: 2rem;
+	padding: 3rem;
 }
 
 #quick-links {
@@ -86,11 +74,70 @@ footer {
 	gap: 20rem;
 	list-style: none;
 	text-align: center;
+	line-height: 2rem;
 
 }
 
 section{
 flex-direction: column;
+}
+
+#locations {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+
+}
+
+.locations-title {
+  grid-column: 1 / -1; /* span both columns */
+	text-align: center;
+}
+
+.locations-text {
+  grid-column: 1;
+	justify-content: left;
+}
+
+.locations-header {
+	margin-bottom: 0;
+}
+
+.locations-map {
+  grid-column: 2;
+}
+
+.farm-sites li {
+	color: var(--dark-text);
+
+}
+
+ul.farm-sites {
+	padding: 0;
+	margin-top: 0.5rem;
+}
+
+ul.partner-schools{
+	padding: 0;
+	margin-top: 0.5rem;
+}
+
+
+.partner-schools li {
+	color: var(--dark-text);
+}
+
+#our-values {
+	display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.values-title {
+  grid-column: 1 / -1; /* span both columns */
+	text-align: center;
 }
 
 img {
@@ -100,6 +147,9 @@ img {
 
 li {
 	list-style-type: none;
+	color: var(--background-color-light);
+	font-size: 1.3rem;
+	line-height: 2rem;
 }
 
 p {
@@ -110,25 +160,56 @@ p {
 }
 
 h3 {
-text-wrap: 60char;
-color: var(--text-color-dark);
-font-size: 2.2rem;
+max-width: 66char;
+color: var(--dark-text);
+font-size: 1.8rem;
+line-height: var(--h3-line-height);
 }
 
 h2 { 
-	font-size: 2.5rem;
-	color: var(--text-color-dark);
+	font-size: 2.1rem;
+	color: var(--dark-text);
+	line-height: var(--h2-line-height);
 }
 
 h1 {
 	font-size: 3rem;
-	color: var(--text-color-dark);
+	color: var(--dark-text);
+	text-align: center;
+	line-height: var(--h1-line-height);
+}
+
+a {
+	font-size: 1.2rem;
+	text-decoration: none;
+}
+
+a:link {
+	color: #FFFCF8;
+}
+
+a:visited {
+	color: #B6703F;
 }
 
 a:hover {
 	color: #EFA672;
 }
 
+button {
+	color: var(--light-text);
+}
+
+.sponsor {
+	background-color: #2C745A;
+	padding: 1.5rem;
+	border-radius: 2em;
+}
+
+hr.solid {
+  width: 100%;
+  border-top: 3px solid #9C8963;
+}
 
 
 /* for nav drop down header */
@@ -141,11 +222,12 @@ a:hover {
   align-items: center;
 }
 
-.nav__item {
+.nav-item {
   position: relative; /* lets submenu position under it */
+	
 }
 
-.nav__toggle {
+.nav-toggle {
   background: transparent;
   border: 0;
   font: inherit;
@@ -154,7 +236,7 @@ a:hover {
 }
 
 /* dropdown box */
-.nav__submenu {
+.nav-submenu {
   list-style: none;
   margin: 0;
   padding: 0.5rem;
@@ -162,13 +244,13 @@ a:hover {
   top: 100%;
   left: 0;
   min-width: 12rem;
-  background: #fff;
-  border: 1px solid #ccc;
+  background: var(--background-color-dark);
   border-radius: 0.5rem;
   z-index: 999;
+	
 }
 
-.nav__submenu a {
+.nav-submenu a {
   display: block;
   padding: 0.5rem 0.75rem;
   text-decoration: none;
@@ -182,6 +264,106 @@ a:hover {
 }
 
 /* Optional: open on hover too (still keep JS for click + keyboard) */
-.nav__item:hover > .nav__submenu {
+.nav-item:hover > .nav__submenu {
   display: block;
 }
+
+/* Newsletter block */
+.newsletter {
+  background: #103729;
+  padding: 5rem 1.5rem;
+}
+
+.newsletter-container {
+  background: #fff;
+  max-width: 36rem;
+  margin: 0 auto;
+  padding: 2.5rem 2.75rem;
+  border-radius: 0.5rem;
+}
+
+.newsletter-title {
+  margin: 0 0 0.75rem;
+  font-size: 2.25rem;
+  line-height: 1.2;
+}
+
+.newsletter-subtitle {
+  margin: 0 0 1.5rem;
+  color: #103729;
+}
+
+/* Form layout */
+.form-grid {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-field label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #103729;
+  font-size: 0.95rem;
+}
+
+.form-field input {
+  width: 100%;
+  min-height: 2.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.25rem;
+  border: 1px solid #d2d7df;
+}
+
+.form-field input:focus {
+  outline: 3px solid rgba(80, 156, 246, 0.35);
+  outline-offset: 2px;
+}
+
+/* Checkbox group */
+.newsletter-fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0 0 1.5rem;
+}
+
+.newsletter-legend {
+  margin-bottom: 0.75rem;
+  color: #103729;
+  font-size: 0.95rem;
+}
+
+.checkbox {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+  margin-bottom: 0.75rem;
+  color: #103729;
+}
+
+.checkbox input {
+  width: 1rem;
+  height: 1rem;
+  margin-top: 0.15rem;
+}
+
+/* Submit */
+.newsletter-button {
+  background: #b6703f;
+  color: #fff8ef;
+  border: 0;
+  border-radius: 0.25rem;
+  padding: 0.75rem 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.newsletter-button:hover {
+  background: #efa672;
+}
+
+/* Optional: make asterisk red */
+.newsletter span[aria-hidden="true"] {
+  color: #dd362a;
+}
+

@@ -6,173 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    </head>
-<title>Harlem Grown</title>
-
-<!-- css starts here -->
+    <title>Harlem Grown</title>
+    <!-- css starts here -->
 <link rel="stylesheet" href="./css/style.css">   
+</head>
 
-<!--
-:root {
-  /* Default and Web Safe Fonts */
-  --classy-font__font-family--arial: Arial, sans-serif;
-  --classy-font__font-family--georgia: Georgia, serif;
-  --classy-font__font-family--impact: Impact, sans-serif;
-  --classy-font__font-family--tahoma: Tahoma, sans-serif;
-  --classy-font__font-family--times-new-roman: 'Times New Roman', serif;
-  --classy-font__font-family--verdana: Verdana, sans-serif;
 
-  /* Google Fonts */
-  --classy-font__font-family--domine: 'Domine', serif;
-  --classy-font__font-family--inter: 'Inter', sans-serif;
-  --classy-font__font-family--karla: 'Karla', sans-serif;
-  --classy-font__font-family--lato: 'Lato', sans-serif;
-  --classy-font__font-family--merriweather: 'Merriweather', serif;
-  --classy-font__font-family--montserrat: 'Montserrat', sans-serif;
-  --classy-font__font-family--open-sans: 'Open Sans', sans-serif;
-  --classy-font__font-family--oswald: 'Oswald', sans-serif;
-  --classy-font__font-family--poppins: 'Poppins', sans-serif;
-  --classy-font__font-family--pt-sans: 'PT Sans', sans-serif;
-  --classy-font__font-family--raleway: 'Raleway', sans-serif;
-  --classy-font__font-family--roboto: 'Roboto', sans-serif;
-  --classy-font__font-family--slabo-13px: 'Slabo 13px', serif;
-  --classy-font__font-family--slabo-27px: 'Slabo 27px', serif;
-  --classy-font__font-family--source-sans-3: 'Source Sans 3', sans-serif;
-
-  /* Theme Colors */
-  --classy-theme-color__brand-primary: #425ccd;
-  --classy-theme-color__brand-secondary: #e8ebf9;
-  --classy-theme-color__brand-tertiary: #303030;
-  --classy-theme-color__text-general: #2d2e31;
-  --classy-theme-color__background: #ffffff;
-  --classy-theme-color__background-accent: #f2f1ef;
-
-  /* Base Font Family */
-  --classy-font__font-family--base: system-ui, -apple-system, BlinkMacSystemFont, 'San Francisco',
-    'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-
-  /* Typography Variables */
-  --classy-font__label--font-size: 12px;
-  --classy-font__label--line-height: 1.5;
-  --classy-font__label--font-weight: 400;
-  --classy-font__label-bold--font-weight: 700;
-
-  --classy-font__paragraph-sm--font-size: 14px;
-  --classy-font__paragraph-sm--line-height: 1.5;
-  --classy-font__paragraph-sm--font-weight: 400;
-  --classy-font__paragraph-sm-bold--font-size: 14px;
-  --classy-font__paragraph-sm-bold--line-height: 1.5;
-  --classy-font__paragraph-sm-bold--font-weight: 700;
-
-  --classy-font__paragraph-md--font-size: 16px;
-  --classy-font__paragraph-md--line-height: 1.5;
-  --classy-font__paragraph-md--font-weight: 400;
-  --classy-font__paragraph-md-bold--font-size: 16px;
-  --classy-font__paragraph-md-bold--line-height: 1.5;
-  --classy-font__paragraph-md-bold--font-weight: 700;
-
-  --classy-font__paragraph-lg--font-size: 20px;
-  --classy-font__paragraph-lg--line-height: 1.5;
-  --classy-font__paragraph-lg--font-weight: 400;
-  --classy-font__paragraph-lg-bold--font-size: 20px;
-  --classy-font__paragraph-lg-bold--line-height: 1.5;
-  --classy-font__paragraph-lg-bold--font-weight: 700;
-
-  --classy-font__heading-sm--font-size: 28px;
-  --classy-font__heading-sm--line-height: 1.2;
-  --classy-font__heading-sm--font-weight: 700;
-
-  --classy-font__tag-bold--font-size: 12px;
-  --classy-font__tag-bold--line-height: 1;
-  --classy-font__tag-bold--font-weight: 700;
-
-  /* General and Heading Font Family Aliases */
-  --classy-theme-font__font-family--paragraph: var(--classy-font__font-family--base);
-  --classy-theme-font__font-family--heading: var(--classy-font__font-family--base);
-
-  --classy-font__heading-xs--font-size: 24px;
-  --classy-font__heading-xs--line-height: 1.2;
-  --classy-font__heading-xs--font-weight: 700;
-
-  --classy-theme-font__paragraph-md--font-size: 16px;
-  --classy-theme-font__paragraph-md--line-height: 1.5;
-  --classy-theme-font__paragraph-md--font-weight: 400;
-
-  /* Border Radius */
-  --classy-border__radius-sm: 4px;
-  --classy-border__radius-md: 8px;
-  --classy-border__radius-lg: 12px;
-  --classy-border__radius-xl: 16px;
-  --classy-border__radius-xxl: 20px;
-
-  /* Shadows */
-  --classy-shadow__button: 0 2px 2px 0 rgba(27, 25, 24, 0.12);
-  --classy-shadow__text: 0 1px 1px 0 rgba(0, 0, 0, 0.24);
-  --classy-shadow__alert: 0 4px 8px 0 rgba(28, 25, 23, 0.12);
-  --classy-shadow__modal: 0 16px 32px 0 rgba(27, 25, 24, 0.12);
-  --classy-shadow__sheet: 0 0 16px 0 rgba(27, 25, 24, 0.24);
-  --classy-shadow__active: 0px 2px 2px 0px rgba(0, 0, 0, 0.24) inset,
-    1px 1px 1px 0px rgba(0, 0, 0, 0.24) inset;
-  --classy-shadow__inactive: 0px -2px 4px 0px rgba(0, 0, 0, 0.12) inset,
-    1px 2px 4px 0px rgba(255, 255, 255, 0.12) inset;
-
-  /* Brand Colors */
-  --classy-color__brand-primary--base: rgb(54, 81, 201);
-  --classy-color__brand-primary--darker: rgb(27, 40, 101);
-  --classy-color__brand-primary--dark: rgb(41, 61, 153);
-  --classy-color__brand-primary--light: rgb(102, 123, 214);
-  --classy-color__brand-primary--lighter: rgb(154, 168, 228);
-  --classy-color__brand-primary--lightest: rgb(207, 213, 242);
-  --classy-color__brand-secondary: rgb(232, 235, 248);
-  --classy-color__brand-secondary-dark: rgb(206, 213, 242);
-  --classy-color__brand-tertiary: rgb(26, 25, 24);
-
-  /* Neutral Colors */
-  --classy-color__neutral--10: rgb(27, 25, 24);
-  --classy-color__neutral--20: rgb(49, 47, 45);
-  --classy-color__neutral--30: rgb(80, 76, 73);
-  --classy-color__neutral--40: rgb(106, 101, 98);
-  --classy-color__neutral--45: rgb(120, 114, 110);
-  --classy-color__neutral--50: rgb(133, 127, 122);
-  --classy-color__neutral--60: rgb(157, 152, 149);
-  --classy-color__neutral--70: rgb(181, 178, 176);
-  --classy-color__neutral--80: rgb(206, 204, 202);
-  --classy-color__neutral--90: rgb(230, 229, 229);
-  --classy-color__neutral--95: rgb(243, 242, 242);
-  --classy-color__neutral--100: rgb(255, 255, 255);
-
-  /* Borders */
-  --classy-color__border--input: var(--classy-color__neutral--50);
-  --classy-color__border--input-hover: var(--classy-color__neutral--60);
-  --classy-color__border--lightest: rgb(235, 234, 234);
-  --classy-color__border--placeholder: rgb(248, 247, 247);
-  --classy-color__border--focus: rgb(41, 114, 255);
-
-  /* Backgrounds */
-  --classy-color__background: rgb(255, 255, 255);
-  --classy-color__background--accent: rgb(245, 245, 245);
-  --classy-color__background--lightest: var(--classy-color__neutral--95);
-  --classy-color__background--input: rgb(248, 247, 247);
-  --classy-color__background--backdrop: rgba(255, 255, 255, 0.8);
-  --classy-color__background--backdrop-dark: rgba(26, 25, 25, 0.8);
-
-  /* Status Colors */
-  --classy-color__status--error-base: rgb(169, 15, 15);
-  --classy-color__status--error-lightest: rgb(254, 246, 246);
-  --classy-color__status--success-base: rgb(46, 125, 50);
-
-  /*
-   * * Component-specific
-   * ! FIXME align breakpoint names with design system, CL-27142
-   */
-  --classy-layout__max-width--tablet: 1280px;
-  --classy-section__padding-inline--mobile: 24px;
-  --classy-section__padding-block--mobile: 24px;
-  --classy-section__padding-inline--tablet: 32px;
-  --classy-section__padding-block--tablet: 48px;
-  --classy-content__width--wide: 768px;
-}
--->
 <body>
 
 
@@ -183,14 +22,14 @@
     </a>
   </h1>
 
-  <nav id="mainNavigation aria-label="Main">
+  <nav id="mainNavigation" aria-label="Main">
         <ul class="nav">
-          <li class="nav__item">
-            <button class="nav__toggle" aria-expanded="false" aria-controls="submenu-who">
+          <li class="nav-item">
+            <button class="nav-toggle" aria-expanded="false" aria-controls="submenu-who">
               Who We Are
             </button>
       
-            <ul class="nav__submenu" id="submenu-who" hidden>
+            <ul class="nav-submenu" id="submenu-who" hidden>
               <li><a href="https://www.harlemgrown.org/about">About Us</a></li>
               <li><a href="https://www.harlemgrown.org/leadership">Leadership</a></li>
               <li><a href="https://www.harlemgrown.org/partners">Partners</a></li>
@@ -199,38 +38,29 @@
             </ul>
           </li>
       
-          <li class="nav__item">
-            <button class="nav__toggle" aria-expanded="false" aria-controls="submenu-farms">
+          <li class="nav-item">
+            <button class="nav-toggle" aria-expanded="false" aria-controls="submenu-farms">
               Farms
             </button>
       
-            <ul class="nav__submenu" id="submenu-farms" hidden>
+            <ul class="nav-submenu" id="submenu-farms" hidden>
               <li><a href="https://www.harlemgrown.org/open-hours">Farms Overview</a></li>
               <li><a href="https://www.harlemgrown.org/farm-stands">Farm Stands</a></li>
             </ul>
           </li>
 
 
-          <li class="nav__item">
-            <button>
-              Community Events
-            </button>
-          </li>
+          <li><a href="https://www.harlemgrown.org/community-events">Community Events</a></li>
 
 
-          <li class="nav__item">
-            <button>
-              Programs
-            </button>
-          </li>
 
-          <li class="nav__item">
-            <button>
-              Get Involved
-            </button>
-          </li>
+          <li><a href="https://www.harlemgrown.org/programs-overview">Programs</a></li>
+
+
+          <li><a href="https://www.harlemgrown.org/getinvolved">Get Involved</a></li>
+
       
-          <li class="nav__cta">
+          <li class="nav-cta">
             <a href="https://give.harlemgrown.org/give/553289/#!/donation/checkout" target="_blank" rel="noopener">
               Donate
             </a>
@@ -260,8 +90,7 @@
 
         
         <section id="about-us">
-<!-- insert divider here-->
-
+          <hr class="solid">
           <div>
             <h3 >WE ARE an independent, non-profit organization whose mission is to inspire youth to lead healthy and ambitious lives through mentorship and hands-on education in urban farming, sustainability, and nutrition.</h3>
             <h3 >We envision a Harlem where all future generations are empowered through our farms and programs to advocate for their health, their community, and their planet.</h3>
@@ -270,17 +99,17 @@
 
 
         <section id="backstory">
-<!-- insert divider here-->
-
+          <hr class="solid">
           <div>
             <h3 >Since 2011, we’ve operated local urban farms,&nbsp;increased access to and knowledge of healthy food for Harlem residents, and provided farm-based development programs to Harlem youth.</h3>
             <p >Healthy habits start young, which is why our programs target elementary-aged students. Because food justice is more than just providing and distributing food, our model seeks to positively impact the entire community through mentorship, education, and partnerships to create sustainable change.&nbsp;</p><p >One of the many ways we fulfill our mission is by raising support for the physical renovation of abandoned lots in Harlem, transforming them into thriving urban farms. Currently, we have 14 urban agriculture facilities ranging from soil-based farms, hydroponic greenhouses and school gardens.</p>
             <p >
-            <a href="mailto:info@harlemgrown.org?subject=Sponsorship%20opportunity">Contact us for sponsorship opportunities</a>.</p>
+            <button class="sponsor"><a href="mailto:info@harlemgrown.org?subject=Sponsorship%20opportunity">Contact us for sponsorship opportunities!</a></button>
           </div>
           
         </section>
 
+        <hr class="solid">
 
         <section id="locations">
           <div class="locations-title">
@@ -288,55 +117,79 @@
           </div>
         
           <div class="locations-text">
-            <h2>Farm Sites:</h2>
-            <h3>127th Street Farm<br>127th Street Learning Annex<br>...</h3>
-        
-            <h2>Partner Schools:</h2>
-            <h3>PS 125<br>PS 154<br>...</h3>
-          </div>
+            <h2 class="locations-header">Farm Sites:</h2>
+              <ul class="farm-sites">
+                <li>127th Street Farm</li>
+                <li>127th Street Learning Annex</li>
+                <li>131st Street Farm</li>
+                <li>134th Street Farm</li>
+                <li>134th Street Greenhouse</li>
+                <li>134th Street Pollinator Lot</li>
+                <li>134th Street Mushroom Farm</li>
+                <li>Riverton Houses Farm</li>
+                <li>139th Street Freight Farm</li>
+              </ul>
+              
+          
+            <h2 class="locations-header">Partner Schools:</h2>
+              <ul class="partner-schools">
+                <li>PS 125</li>
+                <li>PS 154</li>
+                <li>PS 185</li>
+                <li>PS 197</li>
+                <li>St. Hope Leadership Academy</li>
+                <li>Thurgood Marshall Academy Lower School</li>
+                <li>The Urban Assembly School for Global Commerce</li>
+              </ul>
+    </div>
         
           <div class="locations-map">
             <img src="./images/hg-map.png" alt="map of harlem with farm locations marked">
           </div>
+          
         </section>
-        <!-- insert divider here-->
 
-          <div>
+                  <hr class="solid">
+
+
+        <section id="our-values">
+          <div class="values-title">
             <h1>OUR VALUES</h1>
           </div>
           
 <!-- insert divider here-->
           
-          <div>
-            <h2 >COMMUNITY</h2><p >We create a sense of belonging by building and maintaining positive relationships within Harlem.</p>
+          <div class="community-title">
+            <h2 >COMMUNITY</h2>
+            <p >We create a sense of belonging by building and maintaining positive relationships within Harlem.</p>
           </div>
           
           
-          <div >
+          <div class="diversity-title">
             <h2 >DIVERSITY</h2>
             <p >We honor and draw on the different backgrounds and lived experiences of Harlem Grown staff and community members.</p>
           </div>
           
           
-          <div >
+          <div class="food-title">
             <h2 >FOOD SOVEREIGNTY</h2>
             <p >We educate and advocate for food justice to help create sustainable food systems in Harlem.</p>
           </div>
           
           
-          <div >
+          <div class="generations-title">
             <h2 >FUTURE GENERATIONS</h2>
             <p >We value the perspectives of Harlem’s youth and see them as the greatest strength in our community and the food justice movement.</p>
           </div>
           
           
-          <div >
+          <div class="equity-title">
             <h2 >EQUITY</h2>
             <p>We develop systems and policies to support staff and community members in order to meet people where they are and create opportunities that help them thrive.</p>
           </div>
           
           
-          <div >
+          <div class="adapt-title">
             <h2 >ADAPTABILITY</h2>
             <p>We have a high capacity to handle change and approach all challenges with a solution-oriented mindset.</p>
           </div>
@@ -345,20 +198,88 @@
 
 
   <!-- contact form-->
-      <div style="min-height: calc(100vh - 15rem); padding-bottom: 10rem; padding-top: 5rem; background: #103729;">
-        <div class="l-center-container"><div class="sc-ckVGcZ jslhpj"><h1 size="48px" color="#ebe2cc" class="sc-jKJlTe iEJXvW">KEEP IN TOUCH</h1></div><div><div class="sc-bdVaJa iIDDUy"><div><div><p size="16px" color="#103729">Join our mailing list to receive our newsletter, updates, and information on upcoming events.</p>
-        <div spacing="base" class="sc-kkGfuU kGKhzg">
-<form class="js-cm-form" id="subForm" action="https://www.createsend.com/t/subscribeerror?description=" method="post" data-id="191722FC90141D02184CB1B62AB3DC26126D4F1004B82668FAE8453D7397788412B6378B7D5B0B91A0D00660E8D959F50306E493AC35172396773B7CA7A72978"><div size="base" class="sc-cSHVUG jZSLFe">
-    <div size="small" class="sc-cSHVUG kXIIFK">
-      <div>
-        <label size="14px" color="#103729" class="sc-gzVnrw jrKWjO">Email <span class="sc-dnqmqq iFTUZ">*</span>
-        </label><input autocomplete="Email" aria-label="Email" id="fieldEmail" maxlength="200" name="cm-juiyluy-juiyluy" required="" type="email" class="js-cm-email-input qa-input-email sc-gZMcBi dshyOS"></div></div><div size="small" class="sc-cSHVUG kXIIFK"><div><label size="14px" color="#103729" class="sc-gzVnrw jrKWjO">First Name <span class="sc-dnqmqq iFTUZ">*</span></label><input aria-label="First Name" id="fieldjktdtdu" maxlength="200" name="cm-f-jktdtdu" required="" class="sc-gZMcBi dshyOS"></div></div><div size="small" class="sc-cSHVUG kXIIFK"><div><label size="14px" color="#103729" class="sc-gzVnrw jrKWjO">Last Name <span class="sc-dnqmqq iFTUZ">*</span></label><input aria-label="Last Name" id="fieldjktdthl" maxlength="200" name="cm-f-jktdthl" required="" class="sc-gZMcBi dshyOS"></div></div><div size="small" class="sc-cSHVUG kXIIFK"><div><fieldset><label size="14px" color="#103729" class="sc-gzVnrw jrKWjO">I want to receive emails for </label><div><div class="sc-bwzfXH ebeRtN"><input id="1997065" name="cm-fo-jkithdi" type="checkbox" value="1997065" class="qa-checkbox-cm-fo-jkithdi sc-bZQynM eKOoKL"><label size="14px" color="#103729" for="1997065" class="sc-bxivhb gFfAho">Community events &amp; programs</label><div id="1997065-required-label" hidden="" class="sc-EHOje jMsntP">*</div></div></div><div><div class="sc-bwzfXH ebeRtN"><input id="1997066" name="cm-fo-jkithdi" type="checkbox" value="1997066" class="qa-checkbox-cm-fo-jkithdi sc-bZQynM eKOoKL"><label size="14px" color="#103729" for="1997066" class="sc-bxivhb gFfAho">Volunteer opportunities</label><div id="1997066-required-label" hidden="" class="sc-EHOje jMsntP">*</div></div></div><div><div class="sc-bwzfXH ebeRtN"><input id="1997067" name="cm-fo-jkithdi" type="checkbox" value="1997067" class="qa-checkbox-cm-fo-jkithdi sc-bZQynM eKOoKL"><label size="14px" color="#103729" for="1997067" class="sc-bxivhb gFfAho">Donor news &amp; impact</label><div id="1997067-required-label" hidden="" class="sc-EHOje jMsntP">*</div></div></div></fieldset></div></div><div size="base" class="sc-cSHVUG jZSLFe"><div><div spacing="x-small" class="sc-kkGfuU jxYifo"></div><div size="base" class="sc-cSHVUG jZSLFe"><div><div><div class="sc-bwzfXH ebeRtN"><input aria-required="" id="cm-privacy-consent" name="cm-privacy-consent" required="" type="checkbox" class="qa-checkbox-cm-privacy-consent sc-bZQynM eKOoKL"><label size="14px" color="#103729" for="cm-privacy-consent" class="sc-bxivhb gFfAho">I agree to be emailed</label><div id="cm-privacy-consent-required-label" class="sc-EHOje jMsntP">*</div></div></div><input id="cm-privacy-consent-hidden" name="cm-privacy-consent-hidden" type="hidden" value="true"></div></div></div></div></div><button size="16px" color="#ebe2cc" type="submit" class="js-cm-submit-button sc-jWBwVP cpXoWB">Subscribe</button></form></div></div></div></div></div><style>.iIDDUy { background: rgb(255, 255, 255); border-radius: 0.3125rem; max-width: 35.25rem; margin-left: auto; margin-right: auto; padding: 2.5rem 2.75rem; position: relative; }.ebeRtN { align-items: flex-start; display: flex; }.gFfAho { font-size: 14px; padding-left: 0.5rem; overflow-wrap: break-word; word-break: break-word; font-family: Helvetica, Arial, sans-serif; color: rgb(16, 55, 41); position: relative; top: 2px; }.jMsntP { color: rgb(221, 54, 42); font-weight: 400; font-size: 0.75rem; margin-left: 0.125rem; }.eKOoKL { flex-shrink: 0; height: 1rem; position: relative; top: 0.08rem; width: 1rem; }.jrKWjO { font-family: Helvetica, Arial, sans-serif; color: rgb(16, 55, 41); display: block; font-size: 14px; font-weight: 400; margin-bottom: 0.5rem; }.iFTUZ { color: rgb(221, 54, 42); }.dshyOS { appearance: none; background-color: rgb(255, 255, 255); border: 0px; border-radius: 0.1875rem; box-sizing: border-box; box-shadow: rgba(142, 154, 173, 0.1) 0px 2px 0px 0px inset, rgb(210, 215, 223) 0px 0px 0px 1px inset, rgb(255, 255, 255) 0px 1px 0px 0px; color: rgb(67, 77, 93); font-size: 0.875rem; line-height: 1.5; min-height: 2.8125rem; outline: 0px; padding: 0.75rem 1rem; transition: box-shadow 0.2s ease 0s; width: 100%; }.dshyOS:focus { box-shadow: transparent 0px 0px 0px 0px inset, rgb(80, 156, 246) 0px 0px 0px 1px inset, rgba(80, 156, 246, 0.25) 0px 0px 0px 2px; }.jZSLFe { margin-bottom: 1.5rem; }.kXIIFK { margin-bottom: 1rem; }.jslhpj { margin-left: auto; margin-right: auto; max-width: 29.125rem; padding-bottom: 3.125rem; }.iEJXvW { font-size: 48px; text-align: center; letter-spacing: -1px; line-height: 1.17; -webkit-font-smoothing: antialiased; font-weight: 900; font-family: Lato, sans-serif; color: rgb(235, 226, 204); }.kGKhzg { border-bottom: 1px solid rgb(210, 215, 223); margin-bottom: 1.5rem; padding-top: 1.5rem; }.jxYifo { border-bottom: 1px solid rgb(210, 215, 223); margin-bottom: 0.75rem; padding-top: 0.75rem; }.iWwGmW { margin-bottom: 0.25rem; }@-webkit-keyframes iECmZH {   0% { transform: rotate(0deg); }  100% { transform: rotate(360deg); }}@keyframes iECmZH {   0% { transform: rotate(0deg); }  100% { transform: rotate(360deg); }}.dBUami { background-color: rgb(182, 112, 62); border: none; border-radius: 3px; color: rgb(255, 255, 255); display: inline-block; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-style: normal; font-weight: 700; line-height: 1; outline: 0px; padding: 0.75rem 1.5rem; text-decoration: none; transition: background-color 0.1s ease-in 0s, box-shadow 0.1s ease-in 0s; }.dBUami:hover { cursor: pointer; }.cpXoWB { background-color: rgb(182, 112, 62); border: none; border-radius: 3px; color: rgb(235, 226, 204); display: inline-block; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-style: normal; font-weight: 700; line-height: 1; outline: 0px; padding: 0.75rem 1.5rem; text-decoration: none; transition: background-color 0.1s ease-in 0s, box-shadow 0.1s ease-in 0s; }.cpXoWB:hover { cursor: pointer; }.ghLXOK { white-space: pre-wrap; font-size: 16px; font-family: Helvetica, Arial, sans-serif; color: rgb(16, 55, 41); }a, abbr, address, article, aside, b, blockquote, body, caption, cite, code, dd, details, dialog, div, dl, dt, em, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, html, i, iframe, img, label, legend, li, main, menu, nav, object, ol, p, pre, section, small, span, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, u, ul { border: 0px; margin: 0px; padding: 0px; }*, ::after, ::before { box-sizing: inherit; }html { font-family: "Helvetica Neue", Arial, sans-serif; font-size: 16px; }h1, h2, h3, h4, h5, h6, html { color: rgb(67, 77, 93); font-weight: 400; line-height: 1.5; }a { color: rgb(25, 169, 229); text-decoration: underline; }button, label, p { overflow-wrap: break-word; word-break: break-word; }</style><script src="./Harlem Grown_files/webfont.js"></script><script>WebFont.load({google:{families:['Lato:900:latin','Lato:300:latin','Playfair+Display:700italic:latin','Merriweather:700:latin','Crete+Round::latin','PT+Sans+Narrow:700:latin']}});</script><script type="text/javascript" src="./Harlem Grown_files/copypastesubscribeformlogic.js"></script>
-
 
 
 <!-- footer detiallslslsl -->
 
 <footer>
+  <section class="newsletter" aria-labelledby="newsletter-title">
+    <div class="newsletter-container">
+      <h2 class="newsletter-title" id="newsletter-title">Stay in the Loop</h2>
+  
+      <p class="newsletter-subtitle">
+        Join our mailing list for newsletters, updates, and upcoming events.
+      </p>
+  
+      <form
+        class="newsletter-form"
+        id="subForm"
+        action="https://www.createsend.com/t/subscribeerror?description="
+        method="post"
+      >
+        <div class="form-grid">
+          <div class="form-field">
+            <label for="fieldEmail">Email <span aria-hidden="true">*</span></label>
+            <input
+              id="fieldEmail"
+              name="cm-juiyluy-juiyluy"
+              type="email"
+              autocomplete="email"
+              required
+            />
+          </div>
+  
+          <div class="form-field">
+            <label for="fieldFirstName">First name <span aria-hidden="true">*</span></label>
+            <input
+              id="fieldFirstName"
+              name="cm-f-jktdtdu"
+              autocomplete="given-name"
+              required
+            />
+          </div>
+  
+          <div class="form-field">
+            <label for="fieldLastName">Last name <span aria-hidden="true">*</span></label>
+            <input
+              id="fieldLastName"
+              name="cm-f-jktdthl"
+              autocomplete="family-name"
+              required
+            />
+          </div>
+        </div>
+  
+        <fieldset class="newsletter-fieldset">
+          <legend class="newsletter-legend">I want to receive emails for</legend>
+  
+          <label class="checkbox">
+            <input type="checkbox" name="cm-fo-jkithdi" value="1997065" />
+            <span>Community events &amp; programs</span>
+          </label>
+  
+          <label class="checkbox">
+            <input type="checkbox" name="cm-fo-jkithdi" value="1997066" />
+            <span>Volunteer opportunities</span>
+          </label>
+  
+          <label class="checkbox">
+            <input type="checkbox" name="cm-fo-jkithdi" value="1997067" />
+            <span>Donor news &amp; impact</span>
+          </label>
+        </fieldset>
+  
+        <label class="checkbox newsletter-consent">
+          <input id="cm-privacy-consent" name="cm-privacy-consent" type="checkbox" required />
+          <span>I agree to be emailed <span aria-hidden="true">*</span></span>
+        </label>
+  
+        <button class="newsletter-button" type="submit">Subscribe</button>
+      </form>
+    </div>
+  </section>
+  
+
   <nav id="quick-links">
     <ul>
        <li><a href="https://www.instagram.com/harlemgrown/" target="_blank">Instagram</a></li>
@@ -385,7 +306,7 @@
 
  <!-- for navigation drop down to work -->
  <script>
-  const toggles = document.querySelectorAll(".nav__toggle");
+  const toggles = document.querySelectorAll(".nav-toggle");
 
   function closeAll(exceptId = null) {
     toggles.forEach((btn) => {
@@ -414,7 +335,7 @@
 
   // close dropdown when clicking outside
   document.addEventListener("click", (e) => {
-    const clickedInside = e.target.closest(".nav__item");
+    const clickedInside = e.target.closest(".nav-item");
     if (!clickedInside) closeAll();
   });
 
