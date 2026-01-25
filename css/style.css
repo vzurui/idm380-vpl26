@@ -6,6 +6,11 @@
 --light-text: #FFF8EF;
 
 
+--font-main: 'Lexend Deca', Arial, Helvetica, sans-serif;
+  --font-weight-light: 300;
+  --font-weight-medium: 500;
+  --font-weight-bold: 800;
+
 --body-line-height: 1.95rem;
 --body-word-space: 0.1rem;
 --body-letter-space: 0.01rem;
@@ -42,7 +47,7 @@
 
 body {
 	background-color: var(--background-color-light);
-	color: var(--text-color-dark);
+	color: var(--dark-text);
 	padding: 0;
 	margin: 0;
 }
@@ -68,18 +73,74 @@ header {
 	padding: 0 2rem 0 2rem;
 }
 
-
-#logoImage {
-	display: flex;
-  align-items: center;        /* vertical alignment */
-  justify-content: space-between;
-  gap: 2rem;
-}
-
 #logoImage img {
 	max-width: 10rem;
 	height: auto;
 }
+
+
+.navbar a {
+
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  text-decoration: none;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: #389C6D;
+}
+
+
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-family: var(--font-main);
+font-weight: var(--font-weight-medium);
+  font-size: 1.2rem;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 1rem;
+  background-color: inherit;
+  margin: 0;
+}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--background-color-dark);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  padding: 1em;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:focus-within .dropdown-content {
+  display: block;
+}
+
+.navbar a:focus-visible,
+.dropbtn:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+}
+
 
 
 footer {
@@ -115,6 +176,7 @@ footer {
 	justify-content: center;
 	list-style: none;
 	text-align: center;
+	line-height: 2rem;
 
 } 
 
@@ -249,7 +311,7 @@ p {
 h3 {
 font-family: 'Lexend Deca', Arial, Helvetica, sans-serif;
 font-weight: 500;
-max-width: 55char;
+max-width: 55ch;
 color: var(--dark-text);
 font-size: 1.8rem;
 line-height: var(--h3-line-height);
@@ -294,6 +356,7 @@ a:hover {
 button {
 	color: var(--light-text);
   margin-top: 1em;
+  align-items: center;
 }
 
 .sponsor {
@@ -302,67 +365,12 @@ button {
 	border-radius: 2em;
 }
 
+
 hr.solid {
   width: 100%;
   border-top: 3px solid #9C8963;
 }
 
-
-/* for nav drop down header */
-.nav {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-}
-
-.nav-item {
-  position: relative; /* lets submenu position under it */
-	
-}
-
-.nav-toggle {
-  background: transparent;
-  border: 0;
-  font: inherit;
-  padding: 0.75rem 0.5rem;
-  cursor: pointer;
-}
-
-/* dropdown box */
-.nav-submenu {
-  list-style: none;
-  margin: 0;
-  padding: 0.5rem;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  min-width: 12rem;
-  background: var(--background-color-dark);
-  border-radius: 0.5rem;
-  z-index: 999;
-	
-}
-
-.nav-submenu a {
-  display: block;
-  padding: 0.5rem 0.75rem;
-  text-decoration: none;
-}
-
-/* keyboard focus visibility (required imo) */
-.nav a:focus-visible,
-.nav button:focus-visible {
-  outline: 3px solid #000;
-  outline-offset: 3px;
-}
-
-/* Optional: open on hover too (still keep JS for click + keyboard) */
-.nav-item:hover > .nav__submenu {
-  display: block;
-}
 
 /* Newsletter block */
 .newsletter {
@@ -462,4 +470,26 @@ hr.solid {
 .newsletter span[aria-hidden="true"] {
   color: #dd362a;
 }
+
+/* skip nav */
+
+.skip-link{
+  position:absolute;
+  left:-999px;
+  top:0;
+  padding:0.75rem 1rem;
+  background:#fff;
+  color:#000;
+  z-index:1000;
+}
+.skip-link:focus{
+  left:1rem;
+  top:1rem;
+}
+
+/* user prefers dark mode */
+
+/* user prefers light mode */
+
+/* user prefers reduced motion */
 
