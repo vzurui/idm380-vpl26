@@ -103,7 +103,7 @@ header {
   align-items: center;
   gap: 1.5rem;
 	margin: 0;
-	padding: 1rem 2rem 1rem 2rem;
+	padding: 1rem 2rem;
 }
 
 #logoImage img {
@@ -112,83 +112,95 @@ header {
 }
 
 
-.navbar a {
+nav {
+  display: flex;
+}
 
-  float: left;
-  color: white;
-  text-align: center;
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Top-level nav links */
+.navbar a {
+  font-family: var(--font-main);
+  font-size: var(--fs-body);
+  font-weight: var(--font-weight-medium);
+  color: var(--light-text);
   padding: 1rem;
   text-decoration: none;
 }
 
-
-
-
-.dropdown {
-  float: left;
-  overflow: hidden;
+/* Dropdown trigger button */
+.dropbtn {
+  font-family: var(--font-main);
+  font-size: var(--fs-body);
+  font-weight: var(--font-weight-medium);
+  color: var(--light-text);
+  background: none;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
 }
 
-.dropdown .dropbtn {
-  font-family: var(--font-main);
-font-weight: var(--font-weight-medium);
-  font-size: var(--fs-body);  
-  border: none;
-  outline: none;
-  color: white;
-  padding: 1rem;
-  background-color: inherit;
+button.dropbtn {
   margin: 0;
 }
 
+/* Dropdown wrapper */
+.dropdown {
+  position: relative;
+}
 
+/* Dropdown menu */
 .dropdown-content {
   display: none;
   position: absolute;
+  top: 100%;
+  left: 0;
   background-color: var(--primary-dark);
-  z-index: 1;
+  list-style: none;
+  padding: 0.5rem 0;
+  min-width: 12rem;
+  z-index: 10;
 }
 
+/* Dropdown links */
 .dropdown-content a {
-  float: none;
-  padding: 1em;
-  text-decoration: none;
   display: block;
+  padding: 0.75rem 1rem;
+  color: var(--light-text);
   text-align: left;
 }
 
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
+/* Show dropdown */
+.dropdown:hover .dropdown-content,
 .dropdown:focus-within .dropdown-content {
   display: block;
 }
 
-.navbar a:focus-visible,
-.dropbtn:focus-visible {
-  outline: 3px solid #fff;
-  outline-offset: 3px;
+/* Focus styles */
+a:focus-visible,
+button:focus-visible {
+  outline: 0.1875rem solid #fff;
+  outline-offset: 0.2rem;
 }
 
-/* Make dropdown links readable by default */
-.dropdown-content a {
-  color: var(--light-text);
-}
-
-/* Hover + keyboard focus: links + buttons + dropdown items */
+/* Hover + focus styling */
 .navbar a:hover,
+.dropbtn:hover,
 .navbar a:focus-visible,
-.dropdown .dropbtn:hover,
-.dropdown .dropbtn:focus-visible,
+.dropbtn:focus-visible,
 .dropdown-content a:hover,
 .dropdown-content a:focus-visible {
-  color: var(--primary-light); /* #389C6D */
+  color: var(--primary-light);
   text-decoration: underline;
   text-underline-offset: 0.3em;
 }
-
-
 
 footer {
 	background-color: var(--primary-dark);
@@ -224,7 +236,6 @@ footer {
 	list-style: none;
 	text-align: center;
 	line-height: 2rem;
-
 } 
 
 .bold-1{
@@ -257,23 +268,29 @@ footer {
   border-radius: 1rem;
   border: 0.3rem solid var(--primary-mid);
   padding: 2.5em 2.2em 1.5em 2.2em; 
-
 } 
 
 .about-content h2 {
   color: var(--light-text);
 }
 
-
-#about-us h3{
-color: var(--light-text);
+.about-content p {
+  font-size: var(--fs-h3);
+  color: var(--light-text);
 }
-
 
 #backstory {
   display: flex;
   flex-direction: column;
   gap: 4rem;
+}
+
+.bs-intro {
+  font-size: var(--fs-h3);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--lh-h3);
+  letter-spacing: var(--ls-h3);
+  max-width: 52ch;
 }
 
 #locations {
@@ -287,6 +304,11 @@ color: var(--light-text);
 .locations-title {
   grid-column: 1 / -1; /* span both columns */
 	text-align: center;
+}
+
+.locations-title h2 {
+  font-size: var(--fs-h1);
+  font-weight: var(--font-weight-bold);
 }
 
 .locations-text {
@@ -335,8 +357,10 @@ ul.partner-schools{
   margin: 0 22em 0 22em;
 }
 
-.values-title h1{
+.values-title h2 {
 color: var(--light-text);
+font-size: var(--fs-h1);
+font-weight: var(--font-weight-bold);
 }
 
 .community-title h2, .diversity-title h2, .food-title h2, .generations-title h2, .equity-title h2, .adapt-title h2 {
@@ -353,33 +377,33 @@ li {
 	color: var(--background-color-light);
 	font-size: var(--fs-body);
 	line-height: 2rem;
-  font-family: 'Lexend Deca', Arial, Helvetica, sans-serif;
-  font-weight: 300;
+  font-family: var(--font-main);
+  font-weight: var(--font-weight-light);
 
 }
 
 p {
-  font-family: 'Lexend Deca', Arial, Helvetica, sans-serif;
-  font-weight: 300;
+  font-family: var(--font-main);
+  font-weight: var(--font-weight-light);
 	line-height: var(--lh-body);
 	font-size: var(--fs-body);
 	letter-spacing: var(--ls-body);
   max-width: 75ch;
 }
 
-h3 {
-font-family: 'Lexend Deca', Arial, Helvetica, sans-serif;
+/* h3 {
+font-family: var(--font-main);
 font-weight: 500;
 max-width: 52ch;
 color: var(--dark-text);
 font-size: var(--fs-h3);
 line-height: var(--lh-h3);
 letter-spacing: var(--ls-h3);
-}
+} */
 
 h2 { 
-  font-family: 'Lexend Deca', Arial, Helvetica, sans-serif;
-  font-weight: 500;
+  font-family: var(--font-main);
+  font-weight: var(--font-weight-medium);
 	font-size: var(--fs-h2);
 	color: var(--dark-text);
 	line-height: var(--lh-h2);
@@ -387,8 +411,8 @@ h2 {
 }
 
 h1 {
-  font-family: 'Lexend Deca', Arial, Helvetica, sans-serif;
-  font-weight: 800;
+  font-family: var(--font-main);
+  font-weight: var(--font-weight-bold);
 	font-size: var(--fs-h1);
 	color: var(--dark-text);
 	text-align: center;
@@ -397,8 +421,8 @@ h1 {
 }
 
 a {
-  font-family: 'Lexend Deca', Arial, Helvetica, sans-serif;
-  font-weight: 500;
+  font-family: var(--font-main);
+  font-weight: var(--font-weight-medium);
 	font-size: var(--fs-body);
 	text-decoration: none;
 }
@@ -420,7 +444,7 @@ footer a:hover {
 }
 
 main a { 
-  color: var(--light-text); 
+  color: var(--dark-text); 
 }
 
 main a:hover { 
@@ -459,9 +483,9 @@ button {
   display: inline-flex;
 }
 
-/* a.sponsor:hover{
-color: var(--tertiary-light);
-} */
+a.sponsor {
+color: var(--light-text);
+}
 
 
 hr.solid {
@@ -520,7 +544,7 @@ hr.solid {
 
 .form-field input:focus {
   outline: 3px solid rgba(80, 156, 246, 0.35);
-  outline-offset: 2px;
+  outline-offset: 0.2rem;
 }
 
 /* Checkbox group */
@@ -557,7 +581,7 @@ hr.solid {
   border: 0;
   border-radius: 0.25rem;
   padding: 0.75rem 1.5rem;
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   cursor: pointer;
 }
 
@@ -575,7 +599,7 @@ hr.solid {
 
 .skip-link{
   position:absolute;
-  left:-999px;
+  left:-999rem;
   top:0;
   padding:0.75rem 1rem;
   background:#fff;

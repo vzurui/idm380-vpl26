@@ -24,47 +24,37 @@
       <a href="https://www.harlemgrown.org/">
         <img src="./images/hg-logo.png" alt="Harlem Grown">
       </a>
-    </div>    
-
-    <nav>
-
-    <div class="navbar">
-           <div class="dropdown">
-        <button class="dropbtn">Who We Are 
-
-        </button>
-        <div class="dropdown-content">
-          <a href="#">About Us</a>
-          <a href="#">Leadership</a>
-          <a href="#">Partners</a>
-          <a href="#">Our Impact</a>
-          <a href="#">Press</a>
-        </div>
-      </div> 
-
-      <div class="dropdown">
-        <button class="dropbtn">Farms 
-          <i class="fa fa-caret-down"></i>
-     </button>
-        <div class="dropdown-content">
-          <a href="#">Farms Overview</a>
-          <a href="#">Farm Stands</a>
-        </div>
-      </div> 
-
-   
-      <a href="#home">Community Events</a>
-      <a href="#news">Programs</a>
-      <a href="#news">Get Involved</a>
-      <a href="#news">Donate</a>
-
-
     </div>
-    
-  </nav>
   
+    <nav aria-label="Main navigation">
+      <ul class="navbar">
+        <li class="dropdown">
+          <button class="dropbtn">Who We Are</button>
+          <ul class="dropdown-content">
+            <li><a href="#">About Us</a></li>
+            <li><a href="https://www.harlemgrown.org/leadership">Leadership</a></li>
+            <li><a href="https://www.harlemgrown.org/partners">Partners</a></li>
+            <li><a href="https://www.harlemgrown.org/ourimpact">Our Impact</a></li>
+            <li><a href="https://www.harlemgrown.org/press">Press</a></li>
+          </ul>
+        </li>
+  
+        <li class="dropdown">
+          <button class="dropbtn">Farms</button>
+          <ul class="dropdown-content">
+            <li><a href="https://www.harlemgrown.org/open-hours">Farms Overview</a></li>
+            <li><a href="https://www.harlemgrown.org/farm-stands">Farm Stands</a></li>
+          </ul>
+        </li>
+  
+        <li><a href="https://www.harlemgrown.org/community-events">Community Events</a></li>
+        <li><a href="https://www.harlemgrown.org/programs-overview" >Programs</a></li>
+        <li><a href="https://www.harlemgrown.org/getinvolved">Get Involved</a></li>
+        <li><a href="https://give.harlemgrown.org/give/553289/#!/donation/checkout" target="blank">Donate</a></li>
+      </ul>
+    </nav>
   </header>
-  
+    
           
       <main id="main-content">
 
@@ -89,21 +79,21 @@
         <section id="about-us">
           <div class="about-content">
             <h2 class="about-titles" >Our Mission</h2>
-            <h3>We are an independent, non-profit organization whose mission is to inspire youth to lead healthy and ambitious lives through mentorship and hands-on education in urban farming, sustainability, and nutrition.</h3>
+            <p>We are an independent, non-profit organization whose mission is to inspire youth to lead healthy and ambitious lives through mentorship and hands-on education in urban farming, sustainability, and nutrition.</p>
            </div>
 
            <div class="about-content">
             <h2 class="about-titles">Our Vision</h2>
 
-            <h3>We envision a Harlem where all future generations are empowered through our farms and programs to advocate for their health, their community, and their planet.</h3>
+            <p>We envision a Harlem where all future generations are empowered through our farms and programs to advocate for their health, their community, and their planet.</p>
           </div>
         </section>
 
 
         <section id="backstory">
           <hr class="solid">
-          <div class="backstory-content">
-            <h3 >Since 2011, we’ve operated local urban farms,&nbsp;increased access to and knowledge of healthy food for Harlem residents, and provided farm-based development programs to Harlem youth.</h3>
+          <div>
+            <p class="bs-intro" >Since 2011, we’ve operated local urban farms,&nbsp;increased access to and knowledge of healthy food for Harlem residents, and provided farm-based development programs to Harlem youth.</p>
             <p >Healthy habits start young, which is why our programs target elementary-aged students. Because food justice is more than just providing and distributing food, our model seeks to positively impact the entire community through mentorship, education, and partnerships to create sustainable change.&nbsp;</p>
             <p >One of the many ways we fulfill our mission is by raising support for the physical renovation of abandoned lots in Harlem, transforming them into thriving urban farms. Currently, we have 14 urban agriculture facilities ranging from soil-based farms, hydroponic greenhouses and school gardens.</p>
             <a href="mailto:info@harlemgrown.org?subject=Sponsorship%20opportunity" class="sponsor">Contact us for sponsorship opportunities!</a>
@@ -115,7 +105,7 @@
 
         <section id="locations">
           <div class="locations-title">
-            <h1>14 FARMS STRONG</h1>
+            <h2>14 FARMS STRONG</h2>
           </div>
         
           <div class="locations-text">
@@ -156,7 +146,7 @@
 
         <section id="our-values">
           <div class="values-title">
-            <h1>OUR VALUES</h1>
+            <h2>OUR VALUES</h2>
           </div>
           
 <!-- insert divider here-->
@@ -303,79 +293,6 @@
 <a href="mailto:info@harlemgrown.org" class="site-email">
 <span>info@harlemgrown.org</span></a>
  </footer>
-
-
- <!-- for navigation drop down to work -->
- <!-- <script>
-  const toggles = document.querySelectorAll(".nav-toggle");
-
-  function getMenu(btn) {
-    const menuId = btn.getAttribute("aria-controls");
-    return document.getElementById(menuId);
-  }
-
-  function closeAll(exceptBtn = null) {
-    toggles.forEach((btn) => {
-      const menu = getMenu(btn);
-      if (!menu) return;
-
-      if (btn !== exceptBtn) {
-        btn.setAttribute("aria-expanded", "false");
-        menu.hidden = true;
-      }
-    });
-  }
-
-  function openMenu(btn) {
-    const menu = getMenu(btn);
-    if (!menu) return;
-
-    closeAll(btn);
-    btn.setAttribute("aria-expanded", "true");
-    menu.hidden = false;
-
-    const firstLink = menu.querySelector("a");
-    if (firstLink) firstLink.focus();
-  }
-
-  function toggleMenu(btn) {
-    const menu = getMenu(btn);
-    if (!menu) return;
-
-    const isOpen = btn.getAttribute("aria-expanded") === "true";
-    closeAll(btn);
-
-    btn.setAttribute("aria-expanded", String(!isOpen));
-    menu.hidden = isOpen;
-  }
-
-  toggles.forEach((btn) => {
-    btn.addEventListener("click", () => toggleMenu(btn));
-
-    btn.addEventListener("keydown", (e) => {
-      if (e.key === "ArrowDown") {
-        e.preventDefault();
-        openMenu(btn);
-      }
-
-      if (e.key === "Escape") {
-        e.preventDefault();
-        closeAll();
-        btn.focus();
-      }
-    });
-  });
-
-  document.addEventListener("click", (e) => {
-    const insideNav = e.target.closest("#mainNavigation");
-    if (!insideNav) closeAll();
-  });
-
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") closeAll();
-  });
-</script> -->
-
 </body>
 
   
