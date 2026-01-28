@@ -55,6 +55,9 @@
 
 }
 
+/* font sizes */
+
+
 @font-face {
   font-family: 'Lexend Deca';
   src: url('../fonts/Lexend_Deca/static/LexendDeca-Light.ttf') format('truetype');
@@ -79,6 +82,8 @@
   font-display: swap;
 }
 
+/* global styles */
+
 body {
 	background-color: var(--background-color-light);
 	color: var(--dark-text);
@@ -95,10 +100,65 @@ main {
 	margin: 0;
 }
 
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+li {
+	list-style-type: none;
+	color: var(--background-color-light);
+	font-size: var(--fs-body);
+	line-height: 2rem;
+  font-family: var(--font-main);
+  font-weight: var(--font-weight-light);
+
+}
+
+p {
+  font-family: var(--font-main);
+  font-weight: var(--font-weight-light);
+	line-height: var(--lh-body);
+	font-size: var(--fs-body);
+	letter-spacing: var(--ls-body);
+  max-width: 75ch;
+}
+
+/* h3 {
+font-family: var(--font-main);
+font-weight: 500;
+max-width: 52ch;
+color: var(--dark-text);
+font-size: var(--fs-h3);
+line-height: var(--lh-h3);
+letter-spacing: var(--ls-h3);
+} */
+
+h2 { 
+  font-family: var(--font-main);
+  font-weight: var(--font-weight-medium);
+	font-size: var(--fs-h2);
+	color: var(--dark-text);
+	line-height: var(--lh-h2);
+  letter-spacing: var(--ls-h2);
+}
+
+h1 {
+  font-family: var(--font-main);
+  font-weight: var(--font-weight-bold);
+	font-size: var(--fs-h1);
+	color: var(--dark-text);
+	text-align: center;
+	line-height: var(--lh-h1);
+  letter-spacing: var(--ls-h1);
+}
+
+/* nav bar */
+
 header {
 	background-color: var(--primary-dark);
 	display: flex;
-	align-content: flex-end;
+	align-content: center;
 	justify-content: space-between;
   align-items: center;
   gap: 1.5rem;
@@ -115,6 +175,113 @@ header {
 nav {
   display: flex;
 }
+
+.bold-1{
+  color: var(--success-mid);
+}
+
+.bold-2 {
+  color: var(--secondary-dark);
+}
+
+/* hamburger menu styles */
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 0;
+  color: var(--light-text);
+  font-size: 1.75rem;
+  padding: 0.75rem;
+  cursor: pointer;
+}
+
+@media (max-width: 1160px) {
+  #logoImage {
+    order: 1;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-main);
+    font-weight: 500;
+        order: 2;
+    margin: 0;
+  }
+
+  /* hide nav by default on small screens */
+  #mainNav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--primary-dark);
+    padding: 0.5rem 1rem 1rem;
+    z-index: 50;
+  }
+
+  /* show nav when header has .nav-open */
+  header.nav-open #mainNav {
+    display: block;
+  }
+
+  /* stack menu items */
+  .navbar {
+    flex-direction: column;
+    align-items: left;
+  }
+
+  ul.navbar{
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding: 0;
+
+  }
+
+  button.dropbtn {
+    margin: 0;
+    padding: 0;
+  }
+
+  .navbar a,
+  .dropbtn {
+    width: 100%;
+    text-align: left;
+    padding: 0.9rem 0.75rem;
+  }
+
+  /* dropdown menu positioning fix for mobile */
+  .dropdown-content {
+    position: static;
+    width: 100%;
+    display: none;
+    margin: 0.25rem 0 0.75rem;
+    padding: 0.25rem 0 0.25rem 1rem; /* indent */
+    /* background-color: var(--primary-mid);         */
+    border-left: 2px solid var(--primary-light); /* subtle nesting cue */
+    border-radius: 0.25rem;
+  }
+
+  .dropdown-content a {
+    padding: 0.6rem 0.75rem;
+    font-size: 0.95em;  /* slightly smaller than main links */
+  }
+
+
+  /* allow tapping into dropdown via focus */
+  .dropdown:focus-within .dropdown-content {
+    display: block;
+  }
+
+  header {
+    position: relative; /* needed for absolute nav panel */
+  }
+}
+
 
 .navbar {
   display: flex;
@@ -186,7 +353,7 @@ button.dropbtn {
 /* Focus styles */
 a:focus-visible,
 button:focus-visible {
-  outline: 0.1875rem solid #fff;
+  outline: 0.1875rem solid var(--light-text);
   outline-offset: 0.2rem;
 }
 
@@ -202,6 +369,8 @@ button:focus-visible {
   text-underline-offset: 0.3em;
 }
 
+/* footer content */
+
 footer {
 	background-color: var(--primary-dark);
 	 display: flex;
@@ -212,50 +381,59 @@ footer {
 }
 
 .footer-text {
-  color: var(--light-text)
+  color: var(--light-text);
+  text-align: center;
 }
 
-.socials {
+.socials-desktop {
   display: flex;
   flex-direction: row;
   gap: 3rem;
-  justify-content: center
+  justify-content: center;
+  align-items: center;
+
+}
+
+ul.socials-desktop {
+  padding: 0 ;
 }
 
 .footer-nav {
   display: flex;
   flex-direction: row;
   gap: 6rem;
-  justify-content: center
+  justify-content: center;
+  align-items: center;
+}
+
+ul.footer-nav {
+padding:0;
 }
 
  #quick-links {
 	display: flex;
 	flex-direction: column;
+  align-items: center;
 	justify-content: center;
 	list-style: none;
 	text-align: center;
 	line-height: 2rem;
 } 
 
-.bold-1{
-  color: var(--success-mid);
-}
-
-.bold-2 {
-  color: var(--secondary-dark);
-}
+/* body content */
 
 #intro {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 3rem; 
-  align-items: flex-start;
 }
 
 #about-us {
   display: flex;
   flex-direction: row;
+;
   gap: 3.5rem;
 }
 
@@ -354,9 +532,9 @@ ul.partner-schools{
 	text-align: center;
   background-color: var(--primary-dark);
   border-radius: 4rem;
-    margin: 0 auto;
-    max-width: 35rem;
-    padding: 0rem 2.2rem;  
+   margin: 0 auto;
+  max-width: 35rem;
+  padding: 0rem 2.2rem;  
 }
 
 .values-title h2 {
@@ -369,58 +547,7 @@ font-weight: var(--font-weight-bold);
   text-decoration: underline;
 }
 
-img {
-	max-width: 100%;
-	height: auto;
-}
-
-li {
-	list-style-type: none;
-	color: var(--background-color-light);
-	font-size: var(--fs-body);
-	line-height: 2rem;
-  font-family: var(--font-main);
-  font-weight: var(--font-weight-light);
-
-}
-
-p {
-  font-family: var(--font-main);
-  font-weight: var(--font-weight-light);
-	line-height: var(--lh-body);
-	font-size: var(--fs-body);
-	letter-spacing: var(--ls-body);
-  max-width: 75ch;
-}
-
-/* h3 {
-font-family: var(--font-main);
-font-weight: 500;
-max-width: 52ch;
-color: var(--dark-text);
-font-size: var(--fs-h3);
-line-height: var(--lh-h3);
-letter-spacing: var(--ls-h3);
-} */
-
-h2 { 
-  font-family: var(--font-main);
-  font-weight: var(--font-weight-medium);
-	font-size: var(--fs-h2);
-	color: var(--dark-text);
-	line-height: var(--lh-h2);
-  letter-spacing: var(--ls-h2);
-}
-
-h1 {
-  font-family: var(--font-main);
-  font-weight: var(--font-weight-bold);
-	font-size: var(--fs-h1);
-	color: var(--dark-text);
-	text-align: center;
-	line-height: var(--lh-h1);
-  letter-spacing: var(--ls-h1);
-}
+/* links */
 
 a {
   font-family: var(--font-main);
@@ -488,7 +615,7 @@ color: var(--light-text);
 
 hr.solid {
   width: 100%;
-  border-top: 3px solid #9C8963;
+  border-top: 3px solid var(--tertiary-dark);
 }
 
 
@@ -537,7 +664,7 @@ hr.solid {
   min-height: 2.75rem;
   padding: 0.75rem 1rem;
   border-radius: 0.25rem;
-  border: 0.01rem solid #d2d7df;
+  border: 0.01rem solid var(--tertiary-dark);
 }
 
 .form-field input:focus {
@@ -590,7 +717,7 @@ hr.solid {
 
 /* Optional: make asterisk red */
 .newsletter span[aria-hidden="true"] {
-  color: #dd362a;
+  color: var(--error-mid);
 }
 
 /* skip nav */
@@ -600,8 +727,8 @@ hr.solid {
   left:-999rem;
   top:0;
   padding:0.75rem 1rem;
-  background:#fff;
-  color:#000;
+  background:var(--background-color-light);
+  color:var(--dark-text);
   z-index:1000;
 }
 .skip-link:focus{
@@ -656,6 +783,8 @@ hr.solid {
   }
 }
 
+/* responsive styles */
+
 @media (max-width: 64rem){ /* 1024px tablet */
   #locations,
   #our-values{
@@ -676,35 +805,69 @@ hr.solid {
   }
 
   .footer-nav,
-  .socials{
+  .socials-desktop{
     flex-wrap: wrap;
     gap: 1.5rem;
   }
+
+  
 }
 
-@media (max-width: 40rem){ /* 640px */
-  header{
+/* Desktop default */
+.socials-mobile {
+  display: none;
+}
+
+/* Mobile */
+@media (max-width: 40rem) {
+
+  main#main-content {
+    padding: 2rem 4rem;
+  }
+
+  div.newsletter-container {
+    padding: 2.5rem 3.5rem;
+
+  }
+
+  /* hide desktop text list */
+  .socials-desktop {
+    display: none;
+  }
+
+  /* show mobile icon row */
+  .socials-mobile {
+    display: flex;
     justify-content: center;
-    text-align: center;
+    gap: 2em;
   }
 
-  #logoImage img{
-    max-width: 8rem;
+  .social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
   }
 
-  .navbar a,
-  .dropbtn{
-    padding: 0.75rem;
+  .social-icon {
+    display: block;
+    width: 3rem;
+    height: auto;
   }
 
-  .dropdown-content{
-    min-width: 10rem;
-  }
-
-  main{
-    gap: 3rem;
+  .footer-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 0;
   }
 }
+
+
+
+
+
 
 
 
