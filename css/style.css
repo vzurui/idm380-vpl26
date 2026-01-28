@@ -354,7 +354,9 @@ ul.partner-schools{
 	text-align: center;
   background-color: var(--primary-dark);
   border-radius: 4rem;
-  margin: 0 22em 0 22em;
+    margin: 0 auto;
+    max-width: 35rem;
+    padding: 0rem 2.2rem;  
 }
 
 .values-title h2 {
@@ -447,10 +449,6 @@ main a {
   color: var(--dark-text); 
 }
 
-main a:hover { 
-  color: var(--secondary-light);
- }
-
 /* a:link {
 	color: #FFFCF8;
 }
@@ -470,14 +468,14 @@ button {
 }
 
 .sponsor {
-	background-color: #2C745A;
+	background-color: var(--primary-mid);
 	padding: 1.3rem;
 	border-radius: 2em;
   display: inline-flex;
 }
 
 .sponsor:hover{
-	background-color: var(--primary-dark);
+  border: 5px solid var(--primary-dark);
 	padding: 1.3rem;
 	border-radius: 2em;
   display: inline-flex;
@@ -657,5 +655,56 @@ hr.solid {
     scroll-behavior: auto !important;
   }
 }
+
+@media (max-width: 64rem){ /* 1024px tablet */
+  #locations,
+  #our-values{
+    grid-template-columns: 1fr;
+  }
+
+  .locations-map{
+    grid-column: 1;
+  }
+
+  #about-us{
+    flex-direction: column;
+  }
+
+  .values-title{
+    margin: 0;
+    border-radius: 2rem;
+  }
+
+  .footer-nav,
+  .socials{
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 40rem){ /* 640px */
+  header{
+    justify-content: center;
+    text-align: center;
+  }
+
+  #logoImage img{
+    max-width: 8rem;
+  }
+
+  .navbar a,
+  .dropbtn{
+    padding: 0.75rem;
+  }
+
+  .dropdown-content{
+    min-width: 10rem;
+  }
+
+  main{
+    gap: 3rem;
+  }
+}
+
 
 
