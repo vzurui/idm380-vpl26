@@ -618,7 +618,7 @@ main a {
   color: var(--dark-text); 
 }
 
-/* a:link {
+a:link {
 	color: #FFFCF8;
 }
 
@@ -628,7 +628,8 @@ a:visited {
 
 a:hover {
 	color: #EFA672;
-} */
+  text-decoration: underline;
+}
 
 button {
 	color: var(--light-text);
@@ -644,8 +645,8 @@ button {
 }
 
 .sponsor:hover{
-  border: 5px solid var(--primary-dark);
-	padding: 1.3rem;
+  background-color: var(--primary-dark);	
+  padding: 1.3rem;
 	border-radius: 2em;
   display: inline-flex;
 }
@@ -904,6 +905,32 @@ hr.solid {
     gap: 1rem;
     padding: 0;
   }
+  .sponsor {
+	background-color: var(--primary-mid);
+	padding: 1.3rem 0.75rem;
+	border-radius: 2em;
+  align-items: center;
+}
+
+.sponsor:hover{
+  background-color: var(--primary-dark);	
+	border-radius: 2em;
+  display: inline-flex;
+}
+
+a.sponsor {
+color: var(--light-text);
+text-align: center;
+}
+
+figcaption {
+text-align: center;
+}
+
+figure {
+  margin: 0;
+}
+
 }
 
 
