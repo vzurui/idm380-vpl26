@@ -112,7 +112,6 @@ li {
 	line-height: 2rem;
   font-family: var(--font-main);
   font-weight: var(--font-weight-light);
-
 }
 
 p {
@@ -122,6 +121,36 @@ p {
 	font-size: var(--fs-body);
 	letter-spacing: var(--ls-body);
   max-width: 75ch;
+}
+
+figcaption {
+  font-family: var(--font-main);
+  font-weight: var(--font-weight-medium);
+	font-size: var(--fs-h2);
+	color: var(--dark-text);
+	line-height: var(--lh-h2);
+  letter-spacing: var(--ls-h2);
+  margin-bottom: 1rem;
+}
+
+dd {
+  font-family: var(--font-main);
+  font-weight: var(--font-weight-light);
+	line-height: var(--lh-body);
+	font-size: var(--fs-body);
+	letter-spacing: var(--ls-body);
+  max-width: 50ch;
+  margin: 0;
+}
+
+dt {
+  font-family: var(--font-main);
+  font-weight: var(--font-weight-medium);
+	font-size: var(--fs-h2);
+	color: var(--dark-text);
+	line-height: var(--lh-h2);
+  letter-spacing: var(--ls-h2);
+  margin-bottom: 0.75rem;
 }
 
 /* h3 {
@@ -155,7 +184,7 @@ h1 {
 
 /* nav bar */
 
-header {
+/* header {
 	background-color: var(--primary-dark);
 	display: flex;
 	align-content: center;
@@ -164,6 +193,18 @@ header {
   gap: 1.5rem;
 	margin: 0;
 	padding: 1rem 2rem;
+} */
+
+.site-header {
+  background-color: var(--primary-dark);
+	display: flex;
+	align-content: center;
+	justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+	margin: 0;
+	padding: 1rem 2rem;
+
 }
 
 #logoImage img {
@@ -544,7 +585,7 @@ font-size: var(--fs-h1);
 font-weight: var(--font-weight-bold);
 }
 
-.community-title h2, .diversity-title h2, .food-title h2, .generations-title h2, .equity-title h2, .adapt-title h2 {
+.community-title dt, .diversity-title dt, .food-title dt, .generations-title dt, .equity-title dt, .adapt-title dt {
   text-decoration: underline;
 }
 
@@ -744,7 +785,7 @@ hr.solid {
     background: var(--background-color-dark);
   }
 
-  p, h1, h2, h3, .farm-sites li, .partner-schools li {
+  p, h1, h2, h3, dt, dd, figcaption, .farm-sites li, .partner-schools li {
     color: var(--light-text);
   }
   .bold-1{
@@ -763,7 +804,7 @@ hr.solid {
     background: var(--background-color-light);
   }
 
-  p, h1, h2, h3, .farm-sites li, .partner-schools li {
+  p, h1, h2, h3, dt, dd, figcaption, .farm-sites li, .partner-schools li {
     color: var(--dark-text);
   }
   .bold-1{
