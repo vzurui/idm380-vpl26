@@ -622,9 +622,9 @@ a:link {
 	color: #FFFCF8;
 }
 
-a:visited {
+/* a:visited {
 	color: #B6703F;
-}
+} */
 
 a:hover {
 	color: #EFA672;
@@ -777,6 +777,11 @@ hr.solid {
 .skip-link:focus{
   left:1rem;
   top:1rem;
+}
+
+.homework-links a:visited {
+  text-decoration: underline;
+  color: var(--secondary-light);
 }
 
 /* user prefers dark mode */
