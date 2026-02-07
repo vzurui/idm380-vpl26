@@ -420,6 +420,7 @@ footer {
 	align-items: center;
 	gap: 1rem;
 	padding: 3rem;
+  position: relative;
 }
 
 .footer-text {
@@ -765,13 +766,12 @@ hr.solid {
 
 /* skip nav */
 
-.skip-link{
+  .skip-link{
   position:absolute;
   left:-999rem;
   top:0;
   padding:0.75rem 1rem;
-  background:var(--background-color-light);
-  color:var(--dark-text);
+  background:var(--secondary-mid);
   z-index:1000;
 }
 .skip-link:focus{
@@ -779,10 +779,43 @@ hr.solid {
   top:1rem;
 }
 
-.homework-links a:visited {
-  text-decoration: underline;
-  color: var(--secondary-light);
+.skip-footer {
+  position: absolute;
+  left: -999rem;
+  top: 0;
+  transform: translateY(-120%);
+  padding: 0.75rem 1rem;
+  background: var(--secondary-mid);
+  color: var(--light-text);
+  z-index: 1000;
 }
+
+.skip-footer:focus,
+.skip-footer:focus-visible {
+  left: 1rem;
+}
+
+/* On focus only */
+.skip-link:focus,
+.skip-footer:focus,
+.skip-link:focus-visible,
+.skip-footer:focus-visible {
+  text-decoration: underline;
+  outline: 3px solid var(--light-text);
+  outline-offset: 0.25rem;
+}
+
+.skip-link:visited,
+.skip-footer:visited {
+  color: var(--primary-dark);
+}
+
+.skip-link:hover,
+.skip-footer:hover {
+  color: var(--light-text);
+  text-decoration: underline;
+}
+
 
 /* user prefers dark mode */
 
