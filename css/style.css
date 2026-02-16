@@ -764,6 +764,30 @@ hr.solid {
   color: var(--error-mid);
 }
 
+/* error handling */
+
+.error-message {
+  color: #b00020;
+  font-size: 0.9rem;
+}
+
+[aria-invalid="true"] {
+  border: 2px solid #b00020;
+}
+
+.error-summary {
+  border: 2px solid #b00020;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+input:focus,
+button:focus {
+  outline: 3px solid #005fcc;
+  outline-offset: 2px;
+}
+
+
 /* skip nav */
 
   .skip-link{
