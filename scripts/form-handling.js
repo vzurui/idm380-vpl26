@@ -1,42 +1,38 @@
 const form = document.getElementById("subForm");
-const errorSummary = document.getElementById("formErrors");
+
+function getErrorEl(field) {
+  const describedBy = field.getAttribute("aria-describedby") || "";
+  const ids = describedBy.trim().split(/\s+/);
+  const errorId = ids.find((id) => id.includes("error"));
+  return errorId ? document.getElementById(errorId) : null;
+}
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
+  const requiredFields = form.querySelectorAll(
+    "input[required], textarea[required]",
+  );
   let firstInvalid = null;
-  const errors = [];
-
-  // required inputs + required checkboxes
-  const requiredFields = form.querySelectorAll("input[required]");
 
   requiredFields.forEach((field) => {
-    const errorId = field.getAttribute("aria-describedby");
-    const errorEl = errorId ? document.getElementById(errorId) : null;
+    const errorEl = getErrorEl(field);
 
     if (!field.checkValidity()) {
       field.setAttribute("aria-invalid", "true");
       if (errorEl) errorEl.hidden = false;
 
       if (!firstInvalid) firstInvalid = field;
-
-      if (errorEl && errorEl.textContent) errors.push(errorEl.textContent);
     } else {
       field.removeAttribute("aria-invalid");
       if (errorEl) errorEl.hidden = true;
     }
   });
 
-  if (errors.length) {
-    errorSummary.innerHTML =
-      "<p>Please fix the following:</p><ul>" +
-      errors.map((msg) => `<li>${msg}</li>`).join("") +
-      "</ul>";
-    errorSummary.hidden = false;
+  if (firstInvalid) {
     firstInvalid.focus();
     return;
   }
 
-  errorSummary.hidden = true;
-  form.submit();
+  form.reset();
 });

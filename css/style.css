@@ -692,7 +692,7 @@ hr.solid {
 /* Form layout */
 .form-grid {
   display: grid;
-  gap: 1rem;
+  gap: 1.25rem;
   margin-bottom: 1.5rem;
 }
 
@@ -703,13 +703,16 @@ hr.solid {
   font-size: 0.95rem;
 }
 
-.form-field input {
-  width: 95%;
-  min-height: 2.75rem;
+.form-field input,
+.form-field textarea {
+  width: 100%;
   padding: 0.75rem 1rem;
   border-radius: 0.25rem;
-  border: 0.01rem solid var(--tertiary-dark);
+  border: 1px solid var(--tertiary-dark);
+  box-sizing: border-box;
+  font: inherit;
 }
+
 
 .form-field input:focus {
   outline: 3px solid rgba(80, 156, 246, 0.35);
@@ -785,6 +788,11 @@ input:focus,
 button:focus {
   outline: 3px solid #005fcc;
   outline-offset: 2px;
+}
+
+#required-note {
+  font-size: var(--fs-body);
+  color: var(--dark-text);
 }
 
 
