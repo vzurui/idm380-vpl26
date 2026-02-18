@@ -10,9 +10,7 @@ function getErrorEl(field) {
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  const requiredFields = form.querySelectorAll(
-    "input[required], textarea[required]",
-  );
+  const requiredFields = form.querySelectorAll("input[required]");
   let firstInvalid = null;
 
   requiredFields.forEach((field) => {
