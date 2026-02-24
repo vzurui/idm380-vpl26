@@ -1,4 +1,5 @@
 const form = document.getElementById("subForm");
+const successMessage = document.getElementById("formSuccess");
 
 function getErrorEl(field) {
   const describedBy = field.getAttribute("aria-describedby") || "";
@@ -9,6 +10,9 @@ function getErrorEl(field) {
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
+
+  // hide success whenever the user tries again
+  if (successMessage) successMessage.hidden = true;
 
   const requiredFields = form.querySelectorAll("input[required]");
   let firstInvalid = null;
@@ -32,5 +36,7 @@ form.addEventListener("submit", (e) => {
     return;
   }
 
+  // ✅ Success state
   form.reset();
+  if (successMessage) successMessage.hidden = false;
 });

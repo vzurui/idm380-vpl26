@@ -798,6 +798,15 @@ button:focus {
   color: var(--dark-text);
 }
 
+.form-success {
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  background: #e6f6ed;
+  border: 1px solid #2e8b57;
+  color: #1e5f3d;
+  border-radius: 0.25rem;
+}
+
 
 /* skip nav */
 
