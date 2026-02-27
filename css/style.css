@@ -689,6 +689,10 @@ hr.solid {
   color: var(--primary-dark);
 }
 
+section.newsletter {
+  border-radius: 7px;
+}
+
 /* Form layout */
 .form-grid {
   display: grid;
