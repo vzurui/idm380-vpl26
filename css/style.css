@@ -103,6 +103,7 @@ main {
 img {
 	max-width: 100%;
 	height: auto;
+  border-radius: 7px;
 }
 
 li {
@@ -130,7 +131,7 @@ figcaption {
 	color: var(--dark-text);
 	line-height: var(--lh-h2);
   letter-spacing: var(--ls-h2);
-  margin-bottom: 1rem;
+  margin-top: 1rem;
   text-align: center;
 }
 
@@ -598,16 +599,22 @@ ul.partner-schools{
 #our-values {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem 2.5rem;
+  gap: 2.5rem 3rem;
   align-items: stretch;
+  margin: 3rem auto;
+    
 }
 
 .values-title {
   grid-column: 1 / -1;
   max-width: 32rem;
-  margin: 0 auto 2.5rem;
+  margin: 0 auto;
   padding: 1.1rem 2rem;
   text-align: center;
+    text-decoration: none;
+  border-bottom: 3px solid var(--dark-text);
+  display: inline-block;
+  padding-bottom: 0.25rem;
 }
 
 .values-title h2 {
@@ -626,7 +633,7 @@ ul.partner-schools{
   margin: 0;
   padding: 1.5rem 1.5rem 1.25rem;
   border-radius: 1rem;
-  background-color: rgba(255, 255, 255, 0.28);
+  background-color: var(--tertiary-light);
 }
 
 .community-title dt,
@@ -636,8 +643,8 @@ ul.partner-schools{
 .equity-title dt,
 .adapt-title dt {
   margin-bottom: 0.75rem;
-  text-decoration: underline;
-  text-underline-offset: 0.18em;
+  /* text-decoration: underline;
+  text-underline-offset: 0.18em; */
 }
 
 .community-title dd,
@@ -649,7 +656,26 @@ ul.partner-schools{
   margin: 0;
   line-height: 1.6;
 }
+/* 
+dt {
+  text-decoration: none;
+  border-bottom: 3px solid var(--dark-text);
+  display: inline-block;
+  padding-bottom: 0.25rem;
+} */
 
+#our-values dl {
+  padding: 1.75rem 2rem;
+}
+
+#our-values dl {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#our-values dl:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+}
 /* links */
 
 a {
@@ -755,7 +781,9 @@ hr.solid {
 /* Newsletter block */
 .newsletter {
   background: var(--primary-dark);
-  padding: 5rem 1.5rem;
+  padding: 5rem 0;
+  width: 100%;
+  border-radius: 10px;
 }
 
 .newsletter-container {
@@ -777,11 +805,6 @@ hr.solid {
   margin: 0 0 1.5rem;
   color: var(--primary-dark);
 }
-
-section.newsletter {
-  border-radius: 7px;
-}
-
 /* Form layout */
 .form-grid {
   display: grid;
