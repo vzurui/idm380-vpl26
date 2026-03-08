@@ -12,7 +12,6 @@
 <body id="top">
 
 <a class="skip-link" href="#main-content">Skip to main content</a>
-
   <header class="site-header" aria-label="Site header">
   <!-- hamburger menu -->
 
@@ -25,7 +24,7 @@
 
     
     <div id="logoImage">
-      <a href="../homepage/home-page.html">
+      <a href="../final page/home-page.html">
         <img src="../images/hg-logo.png" alt="Harlem Grown Text with a tree">
       </a>
     </div>
@@ -35,156 +34,194 @@
 
       <ul class="navbar">
         <li class="dropdown">
-          <a href="../hwk4/hwk04.html" class="dropbtn" aria-haspopup="true">
+          <a href="../final page/who-we-are.html" class="dropbtn" aria-haspopup="true">
           Who We Are</a>
-          <ul class="dropdown-content">
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Leadership</a></li>
-            <li><a href="#">Partners</a></li>
-            <li><a href="#">Our Impact</a></li>
-            <li><a href="#">Press</a></li>
-          </ul>
         </li>
+
+
   
-        <li class="dropdown">
-          <button class="dropbtn" aria-haspopup="true">
-          Farms</button>
-          <ul class="dropdown-content">
-            <li><a href="#">Farms Overview</a></li>
-            <li><a href="#">Farm Stands</a></li>
-          </ul>
-        </li>
-  
-        <li><a href="#">Community Events</a></li>
-        <li><a href="#" >Programs</a></li>
-        <li><a href="../get-involved/get-involved.html">Get Involved</a></li>
-        <li><a href="../contact form/contact.html" rel="noopener">Contact Us</a></li>
+
+        <li><a href="../final page/get-involved.html">Get Involved</a></li>
+        <li><a href="../final page/contact.html" rel="noopener">Contact Us</a></li>
       </ul>
     </nav>
   </header>
 
+
 <main id="main-content">
+  <!-- HERO -->
+  <section id="intro" aria-label="Intro content">
+    <header aria-label="Intro heading">
+      <h1>
+        In the heart of Harlem, planting fruits and vegetables and growing
+        <span class="bold-1">healthy children</span> and
+        <span class="bold-1">sustainable communities.</span>
+      </h1>
 
-  <!-- Contact Section (formerly footer newsletter) -->
-<section class="newsletter" aria-labelledby="newsletter-title">
-  <div class="newsletter-container">
-    <h2 class="newsletter-title" id="newsletter-title">Stay in the Loop</h2>
+      <p class="bs-intro" id="mission">
+        Our mission is to inspire youth to lead healthy and ambitious lives through mentorship and
+        hands-on education in urban farming, sustainability, and nutrition.
+      </p>
+    </header>
+  </section>
 
-    <p class="newsletter-subtitle" id="newsletter-desc">
-      Join our mailing list for newsletters, updates, and upcoming events.
+  <hr class="solid" aria-hidden="true">
+
+  <!-- PRIMARY CTAs (two linked images) -->
+  <section id="about-us" aria-label="Learn more and get involved">
+    <figure class="cta-card" aria-label="Learn more about Harlem Grown">
+      <a class="cta-link" href="https://www.harlemgrown.org/about">
+        <!-- Alt text explains the LINK purpose (since image is the link) -->
+        <img
+					src="../images/harlem-learn-more.webp"          	
+					alt="Learn more about Harlem Grown"
+        >
+      </a>
+      <!-- <figcaption>Learn more</figcaption> -->
+    </figure>
+
+    <figure class="cta-card" aria-label="Get involved with Harlem Grown">
+      <a class="cta-link" href="https://www.harlemgrown.org/getinvolved">
+        <img
+          src="../images/harlem-get-involved.webp"
+          alt="Get involved with Harlem Grown"
+        >
+      </a>
+    </figure>
+  </section>
+
+  <hr class="solid" aria-hidden="true">
+
+  <!-- DONATION / IMPACT
+  <section id="donate" aria-label="Donation and impact section">
+    <header class="values-title" aria-label="Donation heading">
+      <h2>TOGETHER WE CAN EMPOWER YOUTH</h2>
+    </header>
+
+    <figure aria-label="Donation graphic">
+      <img
+        src="https://images.squarespace-cdn.com/content/v1/57c6fc2346c3c440dcac7a49/1cb74beb-f610-4aa0-bf72-cf1b2ada3770/New+Donation+Graphic+for+HG+Homepage.png"
+        alt="Donation graphic promoting support for Harlem Grown youth programs"
+        width="1878"
+        height="1768"
+        loading="lazy"
+        decoding="async"
+      >
+    </figure>
+
+    <p>
+      <a class="sponsor" href="#">Donate</a>
     </p>
+  </section>
+ -->
 
-<form
-  class="newsletter-form"
-  id="subForm"
-  action="#"
-  method="post"
-  novalidate
-  aria-describedby="required-note"
->
-  <p id="required-note">
-    Fields marked with <span aria-hidden="true">*</span> are required.
-  </p>
+ <section id="impact" aria-labelledby="impact-title" aria-describedby="impact-desc">
+  <!-- Keep your pill heading style if you already have one -->
+  <h2 id="impact-title" class="impact-pill">TOGETHER WE CAN EMPOWER YOUTH!</h2>
 
-  <div class="form-grid">
-    <p class="form-field">
-      <label for="fieldFirstName">First name <span aria-hidden="true">*</span></label>
-      <input
-        id="fieldFirstName"
-        name="firstName"
-        type="text"
-        autocomplete="given-name"
-        placeholder="John"
-        required
-        aria-describedby="firstName-error"
-      />
-      <span class="error-message" id="firstName-error" hidden>Please enter your first name.</span>
-    </p>
+  <div class="impact-wrap">
+    <!-- Accessible donut chart (SVG) -->
+    <figure class="impact-figure">
+      <svg
+        class="donut"
+        viewBox="0 0 42 42"
+        role="img"
+        aria-labelledby="donut-title donut-desc"
+        focusable="false"
+      >
+        <title id="donut-title">Your impact in action</title>
+        <desc id="donut-desc">
+          For every 1 dollar raised: 71 cents is applied directly to programming, and 29 cents supports programming via administration and overhead.
+        </desc>
 
-    <p class="form-field">
-      <label for="fieldLastName">Last name <span aria-hidden="true">*</span></label>
-      <input
-        id="fieldLastName"
-        name="lastName"
-        type="text"
-        autocomplete="family-name"
-        placeholder="Doe"
-        required
-        aria-describedby="lastName-error"
-      />
-      <span class="error-message" id="lastName-error" hidden>Please enter your last name.</span>
-    </p>
+        <!-- Track -->
+        <circle class="donut__track" cx="21" cy="21" r="15.9155"></circle>
 
-    <p class="form-field">
-      <label for="fieldEmail">Email <span aria-hidden="true">*</span></label>
-      <input
-        id="fieldEmail"
-        name="email"
-        type="email"
-        autocomplete="email"
-        inputmode="email"
-        placeholder="name@example.com"
-        required
-        aria-describedby="email-error"
-      />
-      <span class="error-message" id="email-error" hidden>Please enter a valid email address.</span>
-    </p>
+        <!-- 71% programming -->
+        <circle
+          class="donut__segment donut__segment--program"
+          cx="21" cy="21" r="15.9155"
+          style="stroke-dasharray: 71 29;"
+        ></circle>
 
-    <p class="form-field form-field--full">
-      <label for="fieldMessage">Message / Comments</label>
-      <textarea
-        id="fieldMessage"
-        name="message"
-        rows="5"
-        placeholder="How can I help or get involved?"
-      ></textarea>
-    </p>
-  </div>
+        <!-- 29% admin/overhead -->
+        <circle
+          class="donut__segment donut__segment--admin"
+          cx="21" cy="21" r="15.9155"
+          style="stroke-dasharray: 29 71; stroke-dashoffset: -71;"
+        ></circle>
 
-  <fieldset class="newsletter-fieldset">
-    <legend class="newsletter-legend">I want to receive emails for</legend>
+        <!-- Center text (visual) -->
+        <text x="21" y="17.2" class="donut__center-title" text-anchor="middle">
+          YOUR IMPACT
+        </text>
+        <text x="21" y="21.2" class="donut__center-title" text-anchor="middle">
+          IN ACTION
+        </text>
+        <text x="21" y="25.2" class="donut__center-sub" text-anchor="middle">
+          FOR EVERY $1 RAISED
+        </text>
+      </svg>
 
-    <label class="checkbox">
-      <input type="checkbox" name="topics" value="community" />
-      <span>Community events &amp; programs</span>
-    </label>
+      <!-- REAL text content (screen readers + sighted users) -->
+      <figcaption class="impact-caption">
+        <p id="impact-desc" class="impact-lead">For every $1 raised:</p>
 
-    <label class="checkbox">
-      <input type="checkbox" name="topics" value="volunteer" />
-      <span>Volunteer opportunities</span>
-    </label>
+        <ul class="impact-list">
+          <li>
+            <span class="impact-amount">71¢</span>
+            <span class="impact-label">applied directly to programming</span>
+          </li>
+          <li>
+            <span class="impact-amount">29¢</span>
+            <span class="impact-label">supports programming via admin/overhead</span>
+          </li>
+        </ul>
 
-    <label class="checkbox">
-      <input type="checkbox" name="topics" value="donor" />
-      <span>Donor news &amp; impact</span>
-    </label>
-  </fieldset>
-
-  <p class="form-field">
-    <label class="checkbox newsletter-consent" for="cm-privacy-consent">
-      <input
-        id="cm-privacy-consent"
-        name="consent"
-        type="checkbox"
-        required
-        aria-describedby="consent-error"
-      />
-      <span>I agree to be emailed <span aria-hidden="true">*</span></span>
-    </label>
-    <span class="error-message" id="consent-error" hidden>You must agree before submitting.</span>
-  </p>
-  
-<p id="formSuccess" class="form-success" role="status" aria-live="polite" hidden>
-  Thank you! Your message has been sent.
-</p>
-
-  <button class="newsletter-button" type="submit">Send</button>
-</form>
+        <a class="impact-btn" href="https://www.harlemgrown.org/donate">Donate Today</a>
+      </figcaption>
+    </figure>
   </div>
 </section>
+  <hr class="solid" aria-hidden="true">
 
+  <!-- EMBEDDED CONTENT (IFRAME) 
+  <section id="embed" aria-label="Embedded content">
+    <h2>Explore more</h2>
+
+    <div class="iframe-wrap">
+      <iframe
+        src="./Harlem Grown_files/saved_resource.html"
+        width="350"
+        height="600"
+        title="Harlem Grown embedded content"
+        loading="lazy"
+      ></iframe>
+    </div>
+  </section>
+
+
+
+  <hr class="solid" aria-hidden="true">
+	-->
+  <!-- SPONSOR LOGOS -->
+  <section id="sponsors" aria-labelledby="sponsors-title">
+    <h2 id="sponsors-title">Our Partners</h2>
+
+    <ul class="sponsor-logos" aria-label="Partner logos">
+      <li><img src="https://images.squarespace-cdn.com/content/v1/57c6fc2346c3c440dcac7a49/1674237998087-M8QUOS6OZ9G94K8HN5WW/Anahata+Foundation+Transparent+BG+Logo.png" alt="Anahata Foundation logo" loading="lazy" decoding="async"></li>
+      <li><img src="https://images.squarespace-cdn.com/content/v1/57c6fc2346c3c440dcac7a49/1674242938426-YHHIC1TBESTLKK3C76NJ/NEW+Bezos+Family+Foundation+Logo+Transparent+BG.png" alt="Bezos Family Foundation logo" loading="lazy" decoding="async"></li>
+      <li><img src="https://images.squarespace-cdn.com/content/v1/57c6fc2346c3c440dcac7a49/1674244259516-FAUN7CSXYZ9YNHNW24T7/NEW+The+Andrew+W+Mellon+Foundation+Logo+Transparent+BG.png" alt="Andrew W. Mellon Foundation logo" loading="lazy" decoding="async"></li>
+      <li><img src="https://images.squarespace-cdn.com/content/v1/57c6fc2346c3c440dcac7a49/1674238145839-56T411M9NT6Q7WHDOCNC/OXO+Logo+Transparent+BG.png" alt="OXO logo" loading="lazy" decoding="async"></li>
+      <li><img src="https://images.squarespace-cdn.com/content/v1/57c6fc2346c3c440dcac7a49/1674243495115-W1S9Z72KE7IWQXE32IRD/NEW+JPMorganChase+Logo+Transparent+BG.png" alt="JPMorgan Chase logo" loading="lazy" decoding="async"></li>
+      <!-- keep adding the rest the same way -->
+    </ul>
+  </section>
 </main>
 
+
+	<!-- social icons -->
+<!-- footer -->
 <footer aria-label="Footer Content">
 <a href="#top" class="skip-footer">Skip footer</a>  
 
@@ -239,7 +276,6 @@
 <span>info@harlemgrown.org</span></a>
  </footer>
 
-<script src="../scripts/form-handling.js"></script>
 <script src="../scripts/menu.js"></script>
 
 </body>

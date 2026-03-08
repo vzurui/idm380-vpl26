@@ -96,7 +96,7 @@ main {
 	flex-direction: column;
 	justify-content: space-between;
 	gap: 6rem;
-	padding: 6rem 10rem 10rem 10rem;
+	padding: 8rem 10rem 10rem 10rem;
 	margin: 0;
 }
 
@@ -125,12 +125,13 @@ p {
 
 figcaption {
   font-family: var(--font-main);
-  font-weight: var(--font-weight-medium);
+  font-weight: var(--font-weight-light);
 	font-size: var(--fs-h2);
 	color: var(--dark-text);
 	line-height: var(--lh-h2);
   letter-spacing: var(--ls-h2);
   margin-bottom: 1rem;
+  text-align: center;
 }
 
 dd {
@@ -474,10 +475,10 @@ padding:0;
 }
 
 #about-us {
-  display: flex;
-  flex-direction: row;
-;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 3.5rem;
+  align-items: stretch;
 }
 
 .about-content {
@@ -514,36 +515,65 @@ padding:0;
   max-width: 52ch;
 }
 
+/* LOCATIONS */
+
 #locations {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  align-items: center;
-
+  column-gap: 4rem;
+  row-gap: 2rem;
+  align-items: start;
 }
 
 .locations-title {
-  grid-column: 1 / -1; /* span both columns */
-	text-align: center;
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
 .locations-title h2 {
   font-size: var(--fs-h1);
   font-weight: var(--font-weight-bold);
+  margin: 0;
 }
 
 .locations-text {
   grid-column: 1;
-	justify-content: left;
+  max-width: 32rem;
 }
 
 .locations-header {
-	margin-bottom: 0;
+  margin-bottom: 0.75rem;
+}
+
+.locations-text ul {
+  padding: 0;
+  margin: 0 0 2rem;
+  list-style: none;
+}
+
+.locations-text li {
+  color: var(--dark-text);
+  margin-bottom: 0.45rem;
+  line-height: 1.5;
 }
 
 .locations-map {
   grid-column: 2;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  margin: 0;
 }
+
+.locations-map img {
+  display: block;
+  width: 100%;
+  max-width: 27rem;
+  height: auto;
+  object-fit: contain;
+}
+
 
 .farm-sites li {
 	color: var(--dark-text);
@@ -563,31 +593,61 @@ ul.partner-schools{
 	color: var(--dark-text);
 }
 
+/* VALUES */
+
 #our-values {
-	display: grid;
+  display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  align-items: start;
+  gap: 2rem 2.5rem;
+  align-items: stretch;
 }
 
 .values-title {
-  grid-column: 1 / -1; /* span both columns */
-	text-align: center;
-  background-color: var(--primary-dark);
-  border-radius: 4rem;
-   margin: 0 auto;
-  max-width: 35rem;
-  padding: 0rem 2.2rem;  
+  grid-column: 1 / -1;
+  max-width: 32rem;
+  margin: 0 auto 2.5rem;
+  padding: 1.1rem 2rem;
+  text-align: center;
 }
 
 .values-title h2 {
-color: var(--light-text);
-font-size: var(--fs-h1);
-font-weight: var(--font-weight-bold);
+  color: var(--dark-text);
+  font-size: var(--fs-h1);
+  font-weight: var(--font-weight-bold);
+  margin: 0;
 }
 
-.community-title dt, .diversity-title dt, .food-title dt, .generations-title dt, .equity-title dt, .adapt-title dt {
+.community-title,
+.diversity-title,
+.food-title,
+.generations-title,
+.equity-title,
+.adapt-title {
+  margin: 0;
+  padding: 1.5rem 1.5rem 1.25rem;
+  border-radius: 1rem;
+  background-color: rgba(255, 255, 255, 0.28);
+}
+
+.community-title dt,
+.diversity-title dt,
+.food-title dt,
+.generations-title dt,
+.equity-title dt,
+.adapt-title dt {
+  margin-bottom: 0.75rem;
   text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.community-title dd,
+.diversity-title dd,
+.food-title dd,
+.generations-title dd,
+.equity-title dd,
+.adapt-title dd {
+  margin: 0;
+  line-height: 1.6;
 }
 
 /* links */
@@ -639,6 +699,31 @@ button {
 }
 
 .sponsor {
+  display: inline-block;
+  background: var(--secondary-mid); /* was var(--primary-mid) */
+  color: var(--light-text);
+  margin: 1rem 0;
+  padding: 1.5rem 1.6rem;
+  border-radius: 999px;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--fs-body);
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.sponsor:hover {
+  background: var(--secondary-dark);
+  transform: translateY(-0.05rem);
+}
+
+.sponsor:focus-visible {
+  outline: 3px solid var(--light-text); 
+  outline-offset: 3px;               
+}
+
+
+
+/* .sponsor {
 	background-color: var(--primary-mid);
 	padding: 1.3rem;
 	border-radius: 2em;
@@ -654,12 +739,16 @@ button {
 
 a.sponsor {
 color: var(--light-text);
-}
+} */
 
+
+/* DIVIDER */
 
 hr.solid {
   width: 100%;
-  border-top: 3px solid var(--tertiary-dark);
+  border: 0;
+  border-top: 2px solid var(--tertiary-dark);
+  margin: 3rem 0;
 }
 
 
@@ -896,13 +985,6 @@ button:focus {
   object-fit: cover;
 }
 
-#about-us {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  align-items: stretch;
-}
-
 .cta-card {
   aspect-ratio: 1 / 1;   /* makes both perfect squares */
   overflow: hidden;
@@ -924,15 +1006,14 @@ button:focus {
 
 figure.impact-figure {
   background-color: var(--primary-dark);
-  border-radius: 1.25rem; /* 20px -> 1.25rem */
+  border-radius: 1.25rem; 
 }
 
-/* ===============================
-   IMPACT SECTION (Brand Themed)
-================================= */
+/* 
+   IMPACT SECTION 
+ */
 
 #impact {
-  background: var(--background-color-dark);
   color: var(--light-text);
   padding: 4rem 1.25rem;
   font-family: var(--font-main);
@@ -943,12 +1024,11 @@ figure.impact-figure {
 
 .impact-pill {
   display: inline-block;
-  background: var(--primary-dark);
-  color: var(--light-text);
+   color: var(--dark-text);
   padding: 0.65rem 1.2rem;
   border-radius: 999px;
   font-weight: var(--font-weight-bold);
-  font-size: var(--fs-h3);
+  font-size: var(--fs-h1);
   letter-spacing: var(--ls-h3);
   text-transform: uppercase;
   line-height: var(--lh-h3);
@@ -972,11 +1052,11 @@ figure.impact-figure {
   .impact-figure {
     grid-template-columns: 520px 1fr; 
   }
-}
 
-/* ===============================
+
+/*
    DONUT SVG
-================================= */
+*/
 
 .donut {
   width: min(520px, 90vw); 
@@ -1023,9 +1103,9 @@ figure.impact-figure {
   font-size: 1.7px;
   letter-spacing: 0.06em;
 }
-/* ===============================
+/*
    TEXT CONTENT
-================================= */
+ */
 
 .impact-caption {
   font-size: var(--fs-body);
@@ -1055,14 +1135,11 @@ figure.impact-figure {
   align-items: start;
 }
 
-/* Contrast improvement: primary-light on primary-dark can be borderline depending on size.
-   Keep it but ensure it’s bold and large (you already do). If you want it even safer,
-   switch to --secondary-light (commented below). */
 .impact-amount {
   font-weight: var(--font-weight-bold);
   font-size: var(--fs-h2);
   color: var(--primary-light);
-  /* safer option:
+  /*
   color: var(--secondary-light);
   */
 }
@@ -1072,29 +1149,24 @@ figure.impact-figure {
   color: var(--light-text);
 }
 
-/* ===============================
+/* 
    BUTTON
-================================= */
+ */
 
-/* Contrast fix:
-   primary-mid background + light text may NOT hit 4.5:1.
-   Use primary-dark or secondary-mid for safer contrast. */
 .impact-btn {
   display: inline-block;
   background: var(--secondary-mid); /* was var(--primary-mid) */
   color: var(--light-text);
+    margin: 1rem 0;
+
   padding: 0.85rem 1.4rem;
   border-radius: 999px;
   font-weight: var(--font-weight-bold);
   font-size: var(--fs-body);
   text-decoration: none;
-
-  /* Ensure transition applies both hover in and out */
   transition: background 0.3s ease, transform 0.3s ease;
 }
 
-/* Hover: keep contrast safe (secondary-light stays readable with light text?) 
-   If you want zero risk: darken on hover instead of lightening. */
 .impact-btn:hover {
   background: var(--secondary-dark);
   transform: translateY(-0.05rem);
@@ -1105,7 +1177,142 @@ figure.impact-figure {
   outline-offset: 3px;               
 }
 
+/* GET INVOLVED PAGE */
 
+#main-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-top: 6rem;
+  gap: 3.2rem;
+}
+
+.intro {
+  text-align: center;
+}
+
+.intro h1 {
+  margin-bottom: 1.5rem;
+}
+
+.intro p {
+  max-width: 950px;
+  margin: 0 auto 0.75rem;
+}
+
+#get-involved-heading {
+  color: var(--success-mid);
+}
+
+/* top 3 images */
+.image-grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin: 2.5rem 0 3.5rem;
+  padding: 0;
+}
+
+.image-grid li {
+  margin: 0;
+}
+
+.image-grid figure {
+  margin: 0;
+}
+
+.image-grid img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+/* partner section */
+
+#partner-heading {
+  text-align: left;
+  font-size: var(--fs-h2);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 1.5rem;
+}
+
+.opportunity-section p {
+  margin-bottom: 1rem;
+}
+
+/* volunteer + internships */
+.opportunities {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.opportunities article {
+  display: flex;
+  flex-direction: column;
+}
+
+.opportunities figure {
+  margin: 0 0 1.5rem;
+}
+
+.opportunities img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.opportunities h2 {
+  margin-bottom: 1rem;
+}
+
+.opportunities p {
+  margin-bottom: 1rem;
+}
+
+#internship-note {
+  font-size: var(--fs-body);
+  font-weight: var(--font-weight-medium);
+}
+
+/* optional link styling closer to screenshot */
+.opportunity-section a,
+.opportunities a {
+  font-style: italic;
+}
+
+.learn-btn {
+  display: inline-block;
+  background: var(--secondary-mid); /* was var(--primary-mid) */
+  color: var(--light-text);
+  margin: 1rem 0;
+  padding: 1.5rem 1.6rem;
+  border-radius: 999px;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--fs-body);
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.learn-btn:hover {
+  background: var(--secondary-dark);
+  transform: translateY(-0.05rem);
+}
+
+.learn-btn:focus-visible {
+  outline: 3px solid var(--light-text); 
+  outline-offset: 3px;               
+}
+
+/* responsive */
+@media (max-width: 900px) {
+  .image-grid,
+  .opportunities {
+    grid-template-columns: 1fr;
+  }
+}
 /* user prefers dark mode */
 
 @media (prefers-color-scheme: dark){

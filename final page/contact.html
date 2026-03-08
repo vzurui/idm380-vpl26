@@ -2,22 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Harlem Grown</title>
-    <!-- css starts here -->
+  <title>Contact Us</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="../css/style.css">  
-<!-- favicon --> 
 <link rel="icon" href="../icons/favicon.ico">
 
 </head>
 
-
 <body id="top">
 
-  <a href="#main-content" class="skip-link">Skip to main content</a>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 
   <header class="site-header" aria-label="Site header">
   <!-- hamburger menu -->
@@ -31,7 +25,7 @@
 
     
     <div id="logoImage">
-      <a href="../homepage/home-page.html">
+      <a href="../final page/home-page.html">
         <img src="../images/hg-logo.png" alt="Harlem Grown Text with a tree">
       </a>
     </div>
@@ -41,43 +35,140 @@
 
       <ul class="navbar">
         <li class="dropdown">
-          <a href="../hwk4/hwk04.html" class="dropbtn" aria-haspopup="true">
+          <a href="../final page/who-we-are.html" class="dropbtn" aria-haspopup="true">
           Who We Are</a>
-          <ul class="dropdown-content">
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Leadership</a></li>
-            <li><a href="#">Partners</a></li>
-            <li><a href="#">Our Impact</a></li>
-            <li><a href="#">Press</a></li>
-          </ul>
         </li>
+
+
   
-        <li class="dropdown">
-          <button class="dropbtn" aria-haspopup="true">
-          Farms</button>
-          <ul class="dropdown-content">
-            <li><a href="#">Farms Overview</a></li>
-            <li><a href="#">Farm Stands</a></li>
-          </ul>
-        </li>
-  
-        <li><a href="#">Community Events</a></li>
-        <li><a href="#" >Programs</a></li>
-        <li><a href="../get-involved/get-involved.html">Get Involved</a></li>
-        <li><a href="../contact form/contact.html" rel="noopener">Contact Us</a></li>
+
+        <li><a href="../final page/get-involved.html">Get Involved</a></li>
+        <li><a href="../final page/contact.html" rel="noopener">Contact Us</a></li>
       </ul>
     </nav>
   </header>
-    
-          
-      <main id="main-content">
 
-				<!-- enter your content here -->
-      </main>
+<main id="main-content">
 
+  <!-- Contact Section (formerly footer newsletter) -->
+<section class="newsletter" aria-labelledby="newsletter-title">
+  <div class="newsletter-container">
+    <h2 class="newsletter-title" id="newsletter-title">Stay in the Loop</h2>
 
-<!-- footer detiallslslsl -->
+    <p class="newsletter-subtitle" id="newsletter-desc">
+      Join our mailing list for newsletters, updates, and upcoming events.
+    </p>
 
+<form
+  class="newsletter-form"
+  id="subForm"
+  action="#"
+  method="post"
+  novalidate
+  aria-describedby="required-note"
+>
+  <p id="required-note">
+    Fields marked with <span aria-hidden="true">*</span> are required.
+  </p>
+
+  <div class="form-grid">
+    <p class="form-field">
+      <label for="fieldFirstName">First name <span aria-hidden="true">*</span></label>
+      <input
+        id="fieldFirstName"
+        name="firstName"
+        type="text"
+        autocomplete="given-name"
+        placeholder="John"
+        required
+        aria-describedby="firstName-error"
+      />
+      <span class="error-message" id="firstName-error" hidden>Please enter your first name.</span>
+    </p>
+
+    <p class="form-field">
+      <label for="fieldLastName">Last name <span aria-hidden="true">*</span></label>
+      <input
+        id="fieldLastName"
+        name="lastName"
+        type="text"
+        autocomplete="family-name"
+        placeholder="Doe"
+        required
+        aria-describedby="lastName-error"
+      />
+      <span class="error-message" id="lastName-error" hidden>Please enter your last name.</span>
+    </p>
+
+    <p class="form-field">
+      <label for="fieldEmail">Email <span aria-hidden="true">*</span></label>
+      <input
+        id="fieldEmail"
+        name="email"
+        type="email"
+        autocomplete="email"
+        inputmode="email"
+        placeholder="name@example.com"
+        required
+        aria-describedby="email-error"
+      />
+      <span class="error-message" id="email-error" hidden>Please enter a valid email address.</span>
+    </p>
+
+    <p class="form-field form-field--full">
+      <label for="fieldMessage">Message / Comments</label>
+      <textarea
+        id="fieldMessage"
+        name="message"
+        rows="5"
+        placeholder="How can I help or get involved?"
+      ></textarea>
+    </p>
+  </div>
+
+  <fieldset class="newsletter-fieldset">
+    <legend class="newsletter-legend">I want to receive emails for</legend>
+
+    <label class="checkbox">
+      <input type="checkbox" name="topics" value="community" />
+      <span>Community events &amp; programs</span>
+    </label>
+
+    <label class="checkbox">
+      <input type="checkbox" name="topics" value="volunteer" />
+      <span>Volunteer opportunities</span>
+    </label>
+
+    <label class="checkbox">
+      <input type="checkbox" name="topics" value="donor" />
+      <span>Donor news &amp; impact</span>
+    </label>
+  </fieldset>
+
+  <p class="form-field">
+    <label class="checkbox newsletter-consent" for="cm-privacy-consent">
+      <input
+        id="cm-privacy-consent"
+        name="consent"
+        type="checkbox"
+        required
+        aria-describedby="consent-error"
+      />
+      <span>I agree to be emailed <span aria-hidden="true">*</span></span>
+    </label>
+    <span class="error-message" id="consent-error" hidden>You must agree before submitting.</span>
+  </p>
+  
+<p id="formSuccess" class="form-success" role="status" aria-live="polite" hidden>
+  Thank you! Your message has been sent.
+</p>
+
+  <button class="newsletter-button" type="submit">Send</button>
+</form>
+  </div>
+</section>
+
+</main>
 
 <footer aria-label="Footer Content">
 <a href="#top" class="skip-footer">Skip footer</a>  
@@ -133,4 +224,8 @@
 <span>info@harlemgrown.org</span></a>
  </footer>
 
+<script src="../scripts/form-handling.js"></script>
+<script src="../scripts/menu.js"></script>
+
 </body>
+</html>
