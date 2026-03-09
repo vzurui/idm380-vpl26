@@ -65,8 +65,8 @@
 
 
           <figure aria-label="Garden Image">
-            <figcaption aria-label="People in Garden">14 Years of impact!</figcaption>
             <img src="../images/hg-apples.JPG" alt="group of people in a garden. one woman is smiling, two boys are eating apples">
+             <figcaption aria-label="People in Garden">14 years of impact!</figcaption>
           </figure>
         </section>
 
@@ -85,9 +85,9 @@
            </article>
         </section>
 
+        <hr class="solid" aria-hidden="true">
 
         <section id="backstory" aria-label="Backstory content">
-          <hr class="solid" aria-hidden="true">
           <section>
             <p class="bs-intro" >Since 2011, we’ve operated local urban farms,&nbsp;increased access to and knowledge of healthy food for Harlem residents, and provided farm-based development programs to Harlem youth.</p>
             <p >Healthy habits start young, which is why our programs target elementary-aged students. Because food justice is more than just providing and distributing food, our model seeks to positively impact the entire community through mentorship, education, and partnerships to create sustainable change.&nbsp;</p>
@@ -98,57 +98,12 @@
           
         </section>
 
-        <hr class="solid" aria-hidden="true">
-
-        <section id="locations" aria-label="Harlem Grown Partner and Locations Map">
-          <header class="locations-title" aria-label="Locations and Partners heading">
-            <h2>14 FARMS STRONG</h2>
-          </header>
-        
-          <section class="locations-text">
-            <h2 class="locations-header">Farm Sites:</h2>
-              <ul class="farm-sites" aria-label="List of Harlem Grown farm sites">
-                <li aria-label="Farm Site 1">127th Street Farm</li>
-                <li>127th Street Learning Annex</li>
-                <li>131st Street Farm</li>
-                <li>134th Street Farm</li>
-                <li>134th Street Greenhouse</li>
-                <li>134th Street Pollinator Lot</li>
-                <li>134th Street Mushroom Farm</li>
-                <li>Riverton Houses Farm</li>
-                <li>139th Street Freight Farm</li>
-              </ul>
-              
-          
-            <h2 class="locations-header">Partner Schools:</h2>
-              <ul class="partner-schools" aria-label="List of Harlem Grown partner schools">
-                <li>PS 125</li>
-                <li>PS 154</li>
-                <li>PS 185</li>
-                <li>PS 197</li>
-                <li>St. Hope Leadership Academy</li>
-                <li>Thurgood Marshall Academy Lower School</li>
-                <li>The Urban Assembly School for Global Commerce</li>
-              </ul>
-            </section>
-        
-          <figure class="locations-map" aria-label="Harlem Grown farm locations map">
-            <img src="../images/hg-map.png" alt="map of harlem with farm locations marked">
-          </figure>
-          
-        </section>
-
-        <hr class="solid" aria-hidden="true">
-
+        <!-- <hr class="solid" aria-hidden="true"> -->
 
         <section id="our-values" aria-label="Our Values content">
           <header class="values-title" aria-label="Our Values Heading">
             <h2>OUR VALUES</h2>
           </header>
-          
-<!-- insert divider here-->
-
-
           
           <dl class="community-title" aria-label="Value: Community">
             <dt id="dt-community">COMMUNITY</dt>
@@ -185,6 +140,48 @@
             <dd aria-labelledby="dt-adapt">We have a high capacity to handle change and approach all challenges with a solution-oriented mindset.</dd>
           </dl>
         </section>        
+
+        <hr class="solid" aria-hidden="true">
+
+
+        <section id="locations" aria-label="Harlem Grown Partner and Locations Map">
+          <header class="locations-title" aria-label="Locations and Partners heading">
+            <h2>14 FARMS STRONG!</h2>
+          </header>
+        
+          <section class="locations-text">
+            <h2 class="locations-header">Farm Sites:</h2>
+              <ul class="farm-sites" aria-label="List of Harlem Grown farm sites">
+                <li aria-label="Farm Site 1">127th Street Farm</li>
+                <li>127th Street Learning Annex</li>
+                <li>131st Street Farm</li>
+                <li>134th Street Farm</li>
+                <li>134th Street Greenhouse</li>
+                <li>134th Street Pollinator Lot</li>
+                <li>134th Street Mushroom Farm</li>
+                <li>Riverton Houses Farm</li>
+                <li>139th Street Freight Farm</li>
+              </ul>
+              
+          
+            <h2 class="locations-header">Partner Schools:</h2>
+              <ul class="partner-schools" aria-label="List of Harlem Grown partner schools">
+                <li>PS 125</li>
+                <li>PS 154</li>
+                <li>PS 185</li>
+                <li>PS 197</li>
+                <li>St. Hope Leadership Academy</li>
+                <li>Thurgood Marshall Academy Lower School</li>
+                <li>The Urban Assembly School for Global Commerce</li>
+              </ul>
+            </section>
+        
+          <figure class="locations-map" aria-label="Harlem Grown farm locations map">
+            <img src="../images/hg-map.png" alt="map of harlem with farm locations marked">
+          </figure>
+          
+        </section>
+
       </main>
 
 
@@ -192,7 +189,125 @@
 
 
 <footer aria-label="Footer Content">
-<a href="#top" class="skip-footer">Skip footer</a>  
+<a href="#top" class="skip-footer">Skip footer</a>
+
+<!-- <section class="newsletter" aria-labelledby="newsletter-title">
+  <div class="newsletter-container">
+    <h2 class="newsletter-title" id="newsletter-title">Stay in the Loop</h2>
+
+    <p class="newsletter-subtitle" id="newsletter-desc">
+      Join our mailing list for newsletters, updates, and upcoming events.
+    </p>
+
+<form
+  class="newsletter-form"
+  id="subForm"
+  action="#"
+  method="post"
+  novalidate
+  aria-describedby="required-note"
+>
+  <p id="required-note">
+    Fields marked with <span aria-hidden="true">*</span> are required.
+  </p>
+
+  <div class="form-grid">
+    <p class="form-field">
+      <label for="fieldFirstName">First name <span aria-hidden="true">*</span></label>
+      <input
+        id="fieldFirstName"
+        name="firstName"
+        type="text"
+        autocomplete="given-name"
+        placeholder="John"
+        required
+        aria-describedby="firstName-error"
+      />
+      <span class="error-message" id="firstName-error" hidden>Please enter your first name.</span>
+    </p>
+
+    <p class="form-field">
+      <label for="fieldLastName">Last name <span aria-hidden="true">*</span></label>
+      <input
+        id="fieldLastName"
+        name="lastName"
+        type="text"
+        autocomplete="family-name"
+        placeholder="Doe"
+        required
+        aria-describedby="lastName-error"
+      />
+      <span class="error-message" id="lastName-error" hidden>Please enter your last name.</span>
+    </p>
+
+    <p class="form-field">
+      <label for="fieldEmail">Email <span aria-hidden="true">*</span></label>
+      <input
+        id="fieldEmail"
+        name="email"
+        type="email"
+        autocomplete="email"
+        inputmode="email"
+        placeholder="name@example.com"
+        required
+        aria-describedby="email-error"
+      />
+      <span class="error-message" id="email-error" hidden>Please enter a valid email address.</span>
+    </p>
+
+    <p class="form-field form-field--full">
+      <label for="fieldMessage">Message / Comments</label>
+      <textarea
+        id="fieldMessage"
+        name="message"
+        rows="5"
+        placeholder="How can I help or get involved?"
+      ></textarea>
+    </p>
+  </div>
+
+  <fieldset class="newsletter-fieldset">
+    <legend class="newsletter-legend">I want to receive emails for</legend>
+
+    <label class="checkbox">
+      <input type="checkbox" name="topics" value="community" />
+      <span>Community events &amp; programs</span>
+    </label>
+
+    <label class="checkbox">
+      <input type="checkbox" name="topics" value="volunteer" />
+      <span>Volunteer opportunities</span>
+    </label>
+
+    <label class="checkbox">
+      <input type="checkbox" name="topics" value="donor" />
+      <span>Donor news &amp; impact</span>
+    </label>
+  </fieldset>
+
+  <p class="form-field">
+    <label class="checkbox newsletter-consent" for="cm-privacy-consent">
+      <input
+        id="cm-privacy-consent"
+        name="consent"
+        type="checkbox"
+        required
+        aria-describedby="consent-error"
+      />
+      <span>I agree to be emailed <span aria-hidden="true">*</span></span>
+    </label>
+    <span class="error-message" id="consent-error" hidden>You must agree before submitting.</span>
+  </p>
+  
+<p id="formSuccess" class="form-success" role="status" aria-live="polite" hidden>
+  Thank you! Your message has been sent.
+</p>
+
+  <button class="newsletter-button" type="submit">Send</button>
+</form>
+  </div>
+</section> -->
+  
 
   <nav id="quick-links" aria-label="Footer links">
 
@@ -244,6 +359,10 @@
 <a href="#" class="site-email">
 <span>info@harlemgrown.org</span></a>
  </footer>
+
+<script src="../scripts/form-handling.js"></script>
+<script src="../scripts/menu.js"></script>
+
 
 </body>
 
