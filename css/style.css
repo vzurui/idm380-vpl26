@@ -304,9 +304,8 @@ nav {
     width: 100%;
     display: none;
     margin: 0.25rem 0 0.75rem;
-    padding: 0.25rem 0 0.25rem 1rem; /* indent */
-    /* background-color: var(--primary-mid);         */
-    border-left: 2px solid var(--primary-light); /* subtle nesting cue */
+    padding: 0.25rem 0 0.25rem 1rem; 
+    border-left: 2px solid var(--primary-light);
     border-radius: 0.25rem;
   }
 
@@ -315,14 +314,12 @@ nav {
     font-size: 0.95em;  /* slightly smaller than main links */
   }
 
-
-  /* allow tapping into dropdown via focus */
   .dropdown:focus-within .dropdown-content {
     display: block;
   }
 
   header {
-    position: relative; /* needed for absolute nav panel */
+    position: relative; 
   }
 }
 
@@ -473,12 +470,14 @@ padding:0;
   align-items: center;
   justify-content: center;
   gap: 3rem; 
+  max-width: 75rem;
+  margin: 0 auto;
 }
 
 #about-us {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 3.5rem;
+  gap: 2.2rem;
   align-items: stretch;
 }
 
@@ -513,7 +512,32 @@ padding:0;
   font-weight: var(--font-weight-medium);
   line-height: var(--lh-h3);
   letter-spacing: var(--ls-h3);
-  max-width: 52ch;
+  max-width: 58ch;
+}
+
+#intro-home {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  gap: 1rem;
+  margin: 1rem auto;
+}
+
+.header-home {
+  max-width: 75rem;
+  margin: 1rem 0;
+  text-align: left;
+}
+
+.mission-home {
+  font-size: var(--fs-h2);
+  font-weight: var(--font-weight-light);
+  line-height: var(--lh-h3);
+  letter-spacing: var(--ls-h3);
+  max-width: 50ch;
+  text-align: left;
+  margin: 0;
 }
 
 /* LOCATIONS */
@@ -523,7 +547,7 @@ padding:0;
   grid-template-columns: 1fr 1fr;
   column-gap: 4rem;
   row-gap: 2rem;
-  align-items: start;
+  align-items: center;
 }
 
 .locations-title {
@@ -556,7 +580,7 @@ padding:0;
 .locations-text li {
   color: var(--dark-text);
   margin-bottom: 0.45rem;
-  line-height: 1.5;
+  line-height: var(--lh-body);
 }
 
 .locations-map {
@@ -573,6 +597,7 @@ padding:0;
   max-width: 27rem;
   height: auto;
   object-fit: contain;
+  border: var(--primary-mid) 4px solid;
 }
 
 
@@ -598,23 +623,21 @@ ul.partner-schools{
 
 #our-values {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: 2.5rem 3rem;
-  align-items: stretch;
   margin: 3rem auto;
-    
+  align-items: stretch;
 }
 
 .values-title {
   grid-column: 1 / -1;
   max-width: 32rem;
   margin: 0 auto;
-  padding: 1.1rem 2rem;
   text-align: center;
-    text-decoration: none;
+  text-decoration: none;
   border-bottom: 3px solid var(--dark-text);
   display: inline-block;
-  padding-bottom: 0.25rem;
+  padding: 1.1rem 2rem 0.25rem;
 }
 
 .values-title h2 {
@@ -631,9 +654,15 @@ ul.partner-schools{
 .equity-title,
 .adapt-title {
   margin: 0;
-  padding: 1.5rem 1.5rem 1.25rem;
+  padding: 1.75rem 2rem;
   border-radius: 1rem;
-  background-color: var(--tertiary-light);
+  background-color: var(--primary-dark);
+  border: 0.3rem solid var(--primary-mid);
+  min-height: 12rem; /* adjust this value */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .community-title dt,
@@ -643,8 +672,7 @@ ul.partner-schools{
 .equity-title dt,
 .adapt-title dt {
   margin-bottom: 0.75rem;
-  /* text-decoration: underline;
-  text-underline-offset: 0.18em; */
+  color: var(--light-text);
 }
 
 .community-title dd,
@@ -654,28 +682,15 @@ ul.partner-schools{
 .equity-title dd,
 .adapt-title dd {
   margin: 0;
-  line-height: 1.6;
-}
-/* 
-dt {
-  text-decoration: none;
-  border-bottom: 3px solid var(--dark-text);
-  display: inline-block;
-  padding-bottom: 0.25rem;
-} */
-
-#our-values dl {
-  padding: 1.75rem 2rem;
-}
-
-#our-values dl {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  line-height: var(--lh-body);
+  color: var(--light-text);
 }
 
 #our-values dl:hover {
   transform: translateY(-4px);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
 }
+
 /* links */
 
 a {
@@ -726,10 +741,10 @@ button {
 
 .sponsor {
   display: inline-block;
-  background: var(--secondary-mid); /* was var(--primary-mid) */
+  background: var(--secondary-mid); 
   color: var(--light-text);
   margin: 1rem 0;
-  padding: 1.5rem 1.6rem;
+  padding: 1.2rem 1.6rem;
   border-radius: 999px;
   font-weight: var(--font-weight-bold);
   font-size: var(--fs-body);
@@ -748,33 +763,13 @@ button {
 }
 
 
-
-/* .sponsor {
-	background-color: var(--primary-mid);
-	padding: 1.3rem;
-	border-radius: 2em;
-  display: inline-flex;
-}
-
-.sponsor:hover{
-  background-color: var(--primary-dark);	
-  padding: 1.3rem;
-	border-radius: 2em;
-  display: inline-flex;
-}
-
-a.sponsor {
-color: var(--light-text);
-} */
-
-
 /* DIVIDER */
 
 hr.solid {
   width: 100%;
   border: 0;
   border-top: 2px solid var(--tertiary-dark);
-  margin: 3rem 0;
+  margin: 1rem 0;
 }
 
 
@@ -881,7 +876,6 @@ hr.solid {
   color: var(--primary-dark);
 }
 
-/* Optional: make asterisk red */
 .newsletter span[aria-hidden="true"] {
   color: var(--error-mid);
 }
@@ -918,8 +912,8 @@ button:focus {
   margin-top: 1rem;
   padding: 0.75rem 1rem;
   background: #e6f6ed;
-  border: 1px solid #2e8b57;
-  color: #1e5f3d;
+  border: 1px solid var(--primary-mid);
+  color: var(--primary-dark);
   border-radius: 0.25rem;
 }
 
@@ -1048,7 +1042,6 @@ figure.impact-figure {
 .impact-pill {
   display: inline-block;
    color: var(--dark-text);
-  padding: 0.65rem 1.2rem;
   border-radius: 999px;
   font-weight: var(--font-weight-bold);
   font-size: var(--fs-h1);
@@ -1138,6 +1131,7 @@ figure.impact-figure {
 
 .impact-lead {
   margin-bottom: 1rem;
+  color: var(--light-text);
   font-size: var(--fs-h3);
   font-weight: var(--font-weight-medium);
   letter-spacing: var(--ls-h3);
@@ -1178,10 +1172,9 @@ figure.impact-figure {
 
 .impact-btn {
   display: inline-block;
-  background: var(--secondary-mid); /* was var(--primary-mid) */
+  background: var(--secondary-mid);
   color: var(--light-text);
-    margin: 1rem 0;
-
+   margin: 1rem 0;
   padding: 0.85rem 1.4rem;
   border-radius: 999px;
   font-weight: var(--font-weight-bold);
@@ -1218,8 +1211,9 @@ figure.impact-figure {
 }
 
 .intro p {
-  max-width: 950px;
+  max-width: 60ch;
   margin: 0 auto 0.75rem;
+  line-height: var(--lh-body);
 }
 
 #get-involved-heading {
@@ -1232,7 +1226,7 @@ figure.impact-figure {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
-  margin: 2.5rem 0 3.5rem;
+  margin: 2.5rem 0 0.5rem;
   padding: 0;
 }
 
@@ -1301,17 +1295,32 @@ figure.impact-figure {
 }
 
 /* optional link styling closer to screenshot */
-.opportunity-section a,
-.opportunities a {
-  font-style: italic;
+.sign-btn {
+  display: inline-block;
+  width: fit-content;   /* prevents stretching */
+  background: var(--secondary-mid);
+  color: var(--light-text);
+  margin: 1rem 0;
+  padding: 1.2rem 1.6rem;
+  border-radius: 999px;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--fs-body);
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
+
+.sign-btn:hover {
+  background: var(--secondary-dark);
+  transform: translateY(-0.05rem);
+}
+
 
 .learn-btn {
   display: inline-block;
   background: var(--secondary-mid); /* was var(--primary-mid) */
   color: var(--light-text);
-  margin: 1rem 0;
-  padding: 1.5rem 1.6rem;
+  margin: 1.1rem 0;
+  padding: 1.2rem 1.6rem;
   border-radius: 999px;
   font-weight: var(--font-weight-bold);
   font-size: var(--fs-body);
@@ -1327,32 +1336,6 @@ figure.impact-figure {
 .learn-btn:focus-visible {
   outline: 3px solid var(--light-text); 
   outline-offset: 3px;               
-}
-
-/* responsive */
-@media (max-width: 900px) {
-  .image-grid,
-  .opportunities {
-    grid-template-columns: 1fr;
-  }
-}
-/* user prefers dark mode */
-
-@media (prefers-color-scheme: dark){
-  body{
-    background: var(--background-color-dark);
-  }
-
-  p, h1, h2, h3, dt, dd, figcaption, .farm-sites li, .partner-schools li {
-    color: var(--light-text);
-  }
-  .bold-1{
-    color: var(--success-light);
-  }
-  
-  .bold-2 {
-    color: var(--secondary-light);
-  }  
 }
 
 /* user prefers light mode */
@@ -1383,40 +1366,407 @@ figure.impact-figure {
   }
 }
 
-/* responsive styles */
+/* =========================================
+   DARK MODE + RESPONSIVE OVERRIDES
+   paste ABOVE the social media icon section
+========================================= */
 
-@media (max-width: 64rem){ /* 1024px tablet */
+/* ---------- global responsive cleanups ---------- */
+
+/* fix invalid existing rule */
+.form-grid {
+  gap: 1rem;
+}
+
+/* consistent buttons */
+.sponsor,
+.impact-btn,
+.sign-btn,
+.learn-btn,
+.newsletter-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  line-height: 1.2;
+  font-style: normal;
+  text-align: center;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--background-color-dark);
+    color: var(--light-text);
+  }
+
+  p,
+  h1,
+  h2,
+  dt,
+  dd,
+  figcaption,
+  .farm-sites li,
+  .partner-schools li,
+  .locations-text li,
+  .footer-text,
+  .impact-label,
+  .impact-pill,
+  .impact-lead,
+  #required-note {
+    color: var(--light-text);
+  }
+
+  .bold-1 {
+    color: var(--success-light);
+  }
+
+  .bold-2 {
+    color: var(--secondary-light);
+  }
+
+  hr.solid {
+    border-top-color: var(--tertiary-mid);
+    opacity: 0.55;
+  }
+
+  /* major surfaces except newsletter/contact form */
+  .site-header,
+  #mainNav,
+  .dropdown-content,
+  footer,
+  .about-content,
+  figure.impact-figure,
+  .community-title,
+  .diversity-title,
+  .food-title,
+  .generations-title,
+  .equity-title,
+  .adapt-title {
+    background-color: var(--primary-dark);
+  }
+
+  .about-content,
+  .community-title,
+  .diversity-title,
+  .food-title,
+  .generations-title,
+  .equity-title,
+  .adapt-title,
+  .locations-map img {
+    border-color: var(--tertiary-dark);
+  }
+
+  .values-title {
+    border-bottom-color: var(--tertiary-mid);
+  }
+
+  .values-title h2,
+  .locations-title h2,
+  .locations-header,
+  #partner-heading,
+  .intro h1,
+  #get-involved-heading {
+    color: var(--light-text);
+  }
+
+  header a,
+  .navbar a,
+  .dropbtn,
+  footer a,
+  .dropdown-content a {
+    color: var(--light-text);
+  }
+
+  .navbar a:hover,
+  .dropbtn:hover,
+  .navbar a:focus-visible,
+  .dropbtn:focus-visible,
+  .dropdown-content a:hover,
+  .dropdown-content a:focus-visible,
+  footer a:hover,
+  footer a:focus-visible,
+  main a:hover,
+  main a:focus-visible {
+    color: var(--secondary-light);
+    text-decoration: underline;
+    text-underline-offset: 0.3em;
+  }
+
+  main a {
+    color: var(--secondary-light);
+  }
+
+  .sponsor,
+  .impact-btn,
+  .sign-btn,
+  .learn-btn {
+    background: var(--secondary-mid);
+    color: var(--light-text);
+  }
+
+  .sponsor:hover,
+  .impact-btn:hover,
+  .sign-btn:hover,
+  .learn-btn:hover {
+    background: var(--secondary-light);
+    color: var(--dark-text);
+  }
+
+  .donut__track {
+    stroke: var(--tertiary-dark);
+    opacity: 0.5;
+  }
+
+  .donut__center-title,
+  .donut__center-sub {
+    fill: var(--light-text);
+  }
+
+  .impact-amount {
+    color: var(--success-light);
+  }
+
+  .locations-map img {
+    background: var(--light-text);
+  }
+
+  #required-note {
+    color: var(--dark-text);
+  }
+}
+
+/* ---------- tablet ---------- */
+
+@media (max-width: 64rem) {
+  main {
+    padding: 5rem 3rem 6rem;
+    gap: 4.5rem;
+  }
+
+  #main-content {
+    padding-top: 4rem;
+    gap: 2.5rem;
+  }
+
+  #about-us,
   #locations,
-  #our-values{
+  #our-values,
+  .opportunities,
+  .impact-figure {
     grid-template-columns: 1fr;
   }
 
-  .locations-map{
+  .image-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .locations-title,
+  .values-title {
+    max-width: 100%;
+  }
+
+  .locations-text {
+    max-width: 100%;
+  }
+
+  .locations-map {
     grid-column: 1;
+    justify-content: center;
+    align-items: center;
   }
 
-  #about-us{
-    flex-direction: column;
+  .locations-map img {
+    max-width: 24rem;
   }
 
-  .values-title{
-    margin: 0;
-    border-radius: 2rem;
+  .impact-figure {
+    gap: 2rem;
+    padding: 1.75rem;
+  }
+
+  .impact-caption {
+    text-align: left;
+  }
+
+  .donut {
+    width: min(460px, 100%);
   }
 
   .footer-nav,
-  .socials-desktop{
+  .socials-desktop,
+  .sponsor-logos {
     flex-wrap: wrap;
+  }
+
+  .footer-nav {
+    gap: 2rem 3rem;
+  }
+
+  .sponsor-logos {
     gap: 1.5rem;
   }
 
-  
+  .newsletter {
+    padding: 4rem 1.5rem;
+  }
+
+  .newsletter-container {
+    max-width: 100%;
+  }
 }
+
+/* ---------- mobile ---------- */
+
+@media (max-width: 40rem) {
+  main {
+    padding: 3rem 1.25rem 4rem;
+    gap: 3rem;
+  }
+
+  /* leave your existing main#main-content social-media rule alone */
+  #intro,
+  #intro-home {
+    gap: 2rem;
+  }
+
+  #intro h1,
+  .header-home {
+    max-width: 16ch;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .bs-intro,
+  .mission-home,
+  .intro p {
+    max-width: 100%;
+  }
+
+  .bs-intro {
+    text-align: left;
+  }
+
+  #about-us,
+  #locations,
+  #our-values,
+  .image-grid,
+  .opportunities,
+  .impact-figure {
+    grid-template-columns: 1fr;
+  }
+
+  .about-content {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .values-title {
+    padding: 0.85rem 1rem 0.25rem;
+  }
+
+  .community-title,
+  .diversity-title,
+  .food-title,
+  .generations-title,
+  .equity-title,
+  .adapt-title {
+    min-height: auto;
+    padding: 1.35rem 1.25rem;
+  }
+
+  .locations-text {
+    max-width: 100%;
+  }
+
+  .locations-map img {
+    max-width: 20rem;
+  }
+
+  .image-grid {
+    gap: 1rem;
+    margin: 2rem 0 0.25rem;
+  }
+
+  .opportunities {
+    gap: 2rem;
+  }
+
+  .opportunities figure {
+    margin-bottom: 1rem;
+  }
+
+  .sponsor,
+  .impact-btn,
+  .sign-btn,
+  .learn-btn {
+    width: 100%;
+    max-width: 22rem;
+  }
+
+  #impact {
+    padding: 2.5rem 1rem;
+  }
+
+  .impact-pill {
+    margin-bottom: 2rem;
+  }
+
+  .impact-figure {
+    padding: 1.25rem 1rem;
+    gap: 1.5rem;
+  }
+
+  .impact-list li {
+    grid-template-columns: 1fr;
+    row-gap: 0.2rem;
+  }
+
+  .impact-amount {
+    display: block;
+  }
+
+  .newsletter {
+    padding: 2.5rem 1rem;
+    border-radius: 0.75rem;
+  }
+
+  .newsletter-container {
+    max-width: 100%;
+    padding: 1.5rem 1rem;
+  }
+
+  .form-grid {
+    gap: 0.85rem;
+  }
+
+  .checkbox {
+    gap: 0.65rem;
+  }
+
+  .site-header {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  #logoImage img {
+    max-width: 8rem;
+  }
+
+  .navbar a,
+  .dropbtn {
+    padding: 0.85rem 0.25rem;
+  }
+
+  hr.solid {
+    margin: 2rem 0;
+  }
+}
+/* DON'T TOUCH BELOW THIS LINE... SOCIAL MEDIA ICONS */
 
 /* Desktop default */
 .socials-mobile {
   display: none;
 }
+
 
 /* Mobile */
 @media (max-width: 40rem) {
@@ -1430,7 +1780,7 @@ figure.impact-figure {
 
   }
 
-  /* hide desktop text list */
+ /*  hide desktop text list */
   .socials-desktop {
     display: none;
   }
@@ -1462,31 +1812,6 @@ figure.impact-figure {
     gap: 1rem;
     padding: 0;
   }
-  .sponsor {
-	background-color: var(--primary-mid);
-	padding: 1.3rem 0.75rem;
-	border-radius: 2em;
-  align-items: center;
-}
-
-.sponsor:hover{
-  background-color: var(--primary-dark);	
-	border-radius: 2em;
-  display: inline-flex;
-}
-
-a.sponsor {
-color: var(--light-text);
-text-align: center;
-}
-
-figcaption {
-text-align: center;
-}
-
-figure {
-  margin: 0;
-}
 
 }
 
