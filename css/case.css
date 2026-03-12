@@ -109,6 +109,10 @@ img {
 	margin: 2rem 0;
 }
 
+.logo {
+	margin: 0;
+}
+
 p,
 li,
 dd,
@@ -175,8 +179,22 @@ main a {
   color: var(--dark-text);
 }
 
+main a:hover {
+  color: var(--success-mid);
+}
+
+
+main a:visited {
+  color: var(--secondary-dark);
+}
+
 a:hover {
   color: var(--secondary-light);
+  text-decoration: underline;
+}
+
+a:visited {
+  color: var(--dark-text);
   text-decoration: underline;
 }
 
