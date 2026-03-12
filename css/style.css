@@ -471,7 +471,7 @@ padding:0;
   justify-content: center;
   gap: 3rem; 
   max-width: 75rem;
-  margin: 0 auto;
+  margin: 2rem auto 0 auto;
 }
 
 #about-us {
@@ -1294,7 +1294,6 @@ figure.impact-figure {
   font-weight: var(--font-weight-medium);
 }
 
-/* optional link styling closer to screenshot */
 .sign-btn {
   display: inline-block;
   width: fit-content;   /* prevents stretching */
@@ -1317,7 +1316,7 @@ figure.impact-figure {
 
 .learn-btn {
   display: inline-block;
-  background: var(--secondary-mid); /* was var(--primary-mid) */
+  background: var(--secondary-mid); 
   color: var(--light-text);
   margin: 1.1rem 0;
   padding: 1.2rem 1.6rem;
@@ -1365,11 +1364,6 @@ figure.impact-figure {
     scroll-behavior: auto !important;
   }
 }
-
-/* =========================================
-   DARK MODE + RESPONSIVE OVERRIDES
-   paste ABOVE the social media icon section
-========================================= */
 
 /* ---------- global responsive cleanups ---------- */
 
@@ -1535,9 +1529,7 @@ figure.impact-figure {
   }
 }
 
-/* ---------- tablet ---------- */
-
-@media (max-width: 64rem) {
+@media (max-width: 75rem) {
   main {
     padding: 5rem 3rem 6rem;
     gap: 4.5rem;
@@ -1548,9 +1540,8 @@ figure.impact-figure {
     gap: 2.5rem;
   }
 
-  #about-us,
+  /* stack these earlier */
   #locations,
-  #our-values,
   .opportunities,
   .impact-figure {
     grid-template-columns: 1fr;
@@ -1561,10 +1552,7 @@ figure.impact-figure {
   }
 
   .locations-title,
-  .values-title {
-    max-width: 100%;
-  }
-
+  .values-title,
   .locations-text {
     max-width: 100%;
   }
@@ -1582,14 +1570,24 @@ figure.impact-figure {
   .impact-figure {
     gap: 2rem;
     padding: 1.75rem;
+    justify-items: center;
   }
 
   .impact-caption {
+    max-width: 36rem;
+    width: 100%;
+    margin: 0 auto;
     text-align: left;
   }
 
   .donut {
-    width: min(460px, 100%);
+    width: min(420px, 100%);
+  }
+
+  .impact-btn {
+    width: fit-content;
+    max-width: 100%;
+    align-self: flex-start;
   }
 
   .footer-nav,
@@ -1615,6 +1613,66 @@ figure.impact-figure {
   }
 }
 
+/* ---------- tablet ---------- */
+
+@media (max-width: 64rem) {
+  main {
+    padding: 4rem 2rem 5rem;
+    gap: 4rem;
+  }
+
+  #main-content {
+    padding-top: 3.5rem;
+    gap: 2.5rem;
+  }
+
+  #about-us,
+  #our-values {
+    grid-template-columns: 1fr;
+  }
+
+  .image-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+
+  .about-content {
+    padding: 2rem 1.5rem;
+  }
+
+  .values-title {
+    max-width: 100%;
+    padding: 0.95rem 1.25rem 0.25rem;
+  }
+
+  .community-title,
+  .diversity-title,
+  .food-title,
+  .generations-title,
+  .equity-title,
+  .adapt-title {
+    min-height: auto;
+    padding: 1.5rem;
+  }
+
+  .impact-figure {
+    padding: 1.5rem;
+    gap: 1.75rem;
+  }
+
+  .impact-pill {
+    margin-bottom: 2rem;
+  }
+
+  .impact-caption {
+    max-width: 34rem;
+  }
+
+  .donut {
+    width: min(380px, 100%);
+  }
+}
+
 /* ---------- mobile ---------- */
 
 @media (max-width: 40rem) {
@@ -1623,7 +1681,6 @@ figure.impact-figure {
     gap: 3rem;
   }
 
-  /* leave your existing main#main-content social-media rule alone */
   #intro,
   #intro-home {
     gap: 2rem;
@@ -1698,8 +1755,7 @@ figure.impact-figure {
   .impact-btn,
   .sign-btn,
   .learn-btn {
-    width: 100%;
-    max-width: 22rem;
+    max-width: 100%;
   }
 
   #impact {
@@ -1760,6 +1816,8 @@ figure.impact-figure {
     margin: 2rem 0;
   }
 }
+
+
 /* DON'T TOUCH BELOW THIS LINE... SOCIAL MEDIA ICONS */
 
 /* Desktop default */
