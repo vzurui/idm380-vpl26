@@ -39,22 +39,137 @@
     <nav aria-label="Main navigation" id="mainNav">    
       
 
-      <ul class="navbar">
-        <li class="dropdown">
-          <a href="../final page/who-we-are.html" class="dropbtn" aria-haspopup="true">
-          Who We Are</a>
-        </li>
-
-
-  
-
-        <li><a href="../final page/get-involved.html">Get Involved</a></li>
-        <li><a href="../final page/contact.html" rel="noopener">Contact Us</a></li>
-      </ul>
     </nav>
   </header>
 
-      <main id="main-content">
+      <main id="main-content" aria-label="Case study content">
+        <section aria-labelledby="overview-heading">
+        <h1 id="overview-heading">Overview</h1>        
+        <p>
+          This project focuses on redesigning a nonprofit organization’s website with an emphasis on web accessibility and usability. Harlem Grown is a nonprofit organization that provides hands-on education for youth through urban farming, nutrition programs, and community initiatives. Many families rely on community resources to support their children’s development which makes it important for the website must be easy to navigate and accessible to a wide range of users. 
+        </p>
+        
+        <p>
+          The redesign focused on improving the clarity, structure, and accessibility of the website. The goal was to create a site that helps users quickly understand Harlem Grown’s mission and easily find information about programs and opportunities. 
+        </p>
+        </section>
+
+
+
+        <section aria-labelledby="context-heading">
+        <h1 id="context-heading">Context & Challenge</h1>
+        <p>
+          Harlem Grown works to inspire young people to lead healthier lives through access to fresh food, environmental education, and community-based programs. Their website plays an important role in communicating this mission and helping families, volunteers, and community members learn about available opportunities. For many users, the website may be the first place they encounter the organization, making clarity and accessibility especially important. 
+        </p>
+
+        <p>
+          One potential user considered in this redesign is Aimee, a busy single mother raising her young daughter while working long hours as a restaurant server. Although Aimee wants her daughter to grow up with healthy eating habits, her schedule often leads her to rely on quick meals and limited planning. She is interested in programs that could help support her daughter’s nutrition and education, but she does not always know where to start when searching for resources. 
+        </p>
+
+        <figure aria-label="User persona diagram">
+            <img src="../images/User Persona.png"
+          alt="User persona for Aimee, a busy single mother seeking nutrition resources for her daughter">        
+         </figure>
+
+        <p>
+          The challenge of this project was designing a website that could support users like Aimee. The site needed to clearly communicate information about programs, volunteering opportunities, and the organization’s mission while remaining accessible to users with different needs and levels of technical experience. Designing with Aimee in mind helped guide decisions about how information should be structured and presented. For users like her, a website that is easy to navigate, readable, and accessible can make it much easier to discover programs and community resources. 
+        </p>
+
+      
+        </section>
+
+
+
+
+        <section aria-labelledby="goals-heading">
+        <h1 id="goals-heading">Design Goals</h1>        
+         <p>
+          The redesign focused on several key goals: 
+        </p>
+
+        <ul class="design-goals">
+          <li>Improve the overall accessibility of the website </li>
+          <li>Create a clear content hierarchy so users can easily find information </li>
+          <li>Use semantic HTML and ARIA labels to support screen readers </li>
+          <li>Ensure responsive typography that adapts across different screen sizes </li>
+          <li>Maintain Harlem Grown’s warm, community-focused visual identity </li>
+        </ul>
+
+        <p>These goals guided both the design decisions and the technical structure of the site.</p>
+        </section>
+
+        <section aria-labelledby="visual-heading">
+        <h1 id="visual-heading">Visual System</h1>
+        <p>
+          Harlem Grown’s existing branding includes a small set of core colors that reflect the organization’s connection to nature and community. The original palette consists of a deep green, a warm orange, and a muted earth tone. 
+        </p>
+    
+        <figure aria-label="Original Harlem Grown color palette">
+            <img src="../images/Harlem Grown - OG Palette.png"
+          alt="Original Harlem Grown brand color palette with green, orange, and earth tones">
+        </figure>
+
+        <p>
+          While these colors capture the organization’s visual identity, they provide limited flexibility when designing accessible interfaces. To support better contrast and usability, the palette was expanded into a more robust system of primary, secondary, tertiary, neutral, and status colors. This expanded palette allows the interface to maintain Harlem Grown’s visual character while also supporting accessible contrast combinations for text, UI components, and feedback states.
+        </p>
+
+        <figure aria-label="Expanded Harlem Grown accessible color palette">
+            <img src="../images/Harlem Grown - Robust Color Palette Light.png"
+          alt="Expanded Harlem Grown color palette including primary, secondary, tertiary, and status colors">
+        </figure>
+
+        <p>
+          To further ensure accessibility, color combinations were evaluated based on <a href="https://webaim.org/resources/contrastchecker/" target="_blank" rel="noopener noreferrer">accessibility contrast tools</a> and categorized according to where they can be used safely, including regular body text, large text, UI components, and decorative elements. This approach helps maintain visual consistency while ensuring that important information remains readable. 
+        </p>
+
+        <figure aria-label="Accessible color contrast pairing examples">
+            <img src="../images/Harlem Grown - Accessible Color Contrast Options Palette.png"
+          alt="Accessible color contrast pairings showing which combinations are suitable for body text, large text, and UI components">
+        </figure>
+
+        <p>
+          The palette structure was informed in part by accessibility guidance from Harvard’s digital accessibility resources, which provide examples of color contrast combinations that meet WCAG recommendations. Using this reference helped guide the development of contrast pairings that support both usability and visual cohesion. 
+        </p>
+        </section>
+
+
+        <section aria-labelledby="accessibility-heading">
+        <h1 id="accessibility-heading">Accessibility Strategy</h1>
+        <p>
+          The site was built using semantic HTML to create a clear and logical page structure that screen readers and assistive technologies can easily interpret. Landmarks such as &lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, and &lt;footer&gt; help users navigate the site more efficiently. ARIA labels were added where necessary to clarify interactive elements, and skip links allow keyboard users to jump directly to the main content, reducing repetitive navigation. 
+        </p>
+
+        <p>
+          Content accessibility was also considered. Images were provided with descriptive alt text so that visual information can still be understood by users relying on screen readers.
+        </p>
+
+        <p>
+          Visual readability was supported through responsive typography and accessible color contrast. The site uses modern CSS techniques such as clamp() to allow text to scale fluidly across different screen sizes while maintaining clear hierarchy and readability. Color pairings were also designed with accessible contrast ratios to ensure that text remains readable against different backgrounds.           Together, these decisions help create a more inclusive and accessible experience for users like Aimee. 
+
+        </p>
+
+        <p>
+          Together, these decisions help create a more inclusive and accessible experience for users like Aimee. Clear structure, readable text, and accessible navigation allow users to quickly understand Harlem Grown’s mission and find the information they need.        </p>
+        </section>
+
+
+          <section aria-labelledby="takeaways-heading">
+          <h1 id="takeaways-heading">Takeaways</h1>          <p>
+            This project demonstrated how accessibility plays a crucial role in effective web design. By focusing on semantic structure, clear hierarchy, and responsive typography, the site becomes easier to navigate for a wider range of users. 
+          </p>
+
+          <p>
+            Designing with a specific persona in mind also helped guide decisions about content clarity and usability. For users like Aimee, who may have limited time and rely on quick access to information, a clear and accessible website can make it much easier to discover community resources and opportunities. 
+          </p>
+
+          <p>
+            If more time were available, the next step would be expanding the redesign across the entire website and continuing to refine the responsive layout and accessibility features. Further usability testing could also help identify additional opportunities to improve navigation and clarity for users. My hope is that an accessible and easy-to-navigate website will help people quickly find the programs and community resources they may need.
+          </p>
+        </section>
+
+
+
+
 			</main>
 
 	<footer aria-label="Footer Content">
@@ -110,9 +225,5 @@
 <a href="#" class="site-email">
 <span>info@harlemgrown.org</span></a>
  </footer>
-
-<script src="../scripts/form-handling.js"></script>
-<script src="../scripts/menu.js"></script>
-
 
 </body>
